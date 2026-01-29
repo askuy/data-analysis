@@ -29,7 +29,7 @@ def remove_base64_images(input_file, output_file=None):
     print(f"Found {len(matches)} base64 images")
 
     # Replace with empty string or placeholder
-    cleaned_content = re.sub(pattern, '[image removed]', content)
+    cleaned_content = re.sub(pattern, '', content)
 
     new_size = len(cleaned_content)
 

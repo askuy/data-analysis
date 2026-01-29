@@ -1,0 +1,1 @@
+python3 remove_base64_images.py "2025/产研周报-2025-下半年.md"
