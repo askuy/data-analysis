@@ -1,0 +1,793 @@
+{
+  "generated_at": "2026-01-29T18:51:58.744217",
+  "total_entries": 43,
+  "date_range": {
+    "start": "20250818",
+    "end": "20250811"
+  },
+  "client_health": {
+    "滴滴": {
+      "total_mentions": 26,
+      "incident_count": 8,
+      "incident_ratio": 0.31,
+      "health_status": "attention"
+    },
+    "好未来": {
+      "total_mentions": 23,
+      "incident_count": 6,
+      "incident_ratio": 0.26,
+      "health_status": "attention"
+    },
+    "TCL": {
+      "total_mentions": 19,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "广东电信": {
+      "total_mentions": 18,
+      "incident_count": 1,
+      "incident_ratio": 0.06,
+      "health_status": "healthy"
+    },
+    "OPPO": {
+      "total_mentions": 17,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "天翼云盘": {
+      "total_mentions": 16,
+      "incident_count": 2,
+      "incident_ratio": 0.12,
+      "health_status": "healthy"
+    },
+    "招商金科": {
+      "total_mentions": 15,
+      "incident_count": 1,
+      "incident_ratio": 0.07,
+      "health_status": "healthy"
+    },
+    "格力": {
+      "total_mentions": 15,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "苏州国发": {
+      "total_mentions": 14,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "中电量子": {
+      "total_mentions": 14,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "微众银行": {
+      "total_mentions": 12,
+      "incident_count": 1,
+      "incident_ratio": 0.08,
+      "health_status": "healthy"
+    },
+    "喜马拉雅": {
+      "total_mentions": 11,
+      "incident_count": 1,
+      "incident_ratio": 0.09,
+      "health_status": "healthy"
+    },
+    "宜宾辰海": {
+      "total_mentions": 11,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "新华三": {
+      "total_mentions": 10,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "苏州公安": {
+      "total_mentions": 9,
+      "incident_count": 1,
+      "incident_ratio": 0.11,
+      "health_status": "healthy"
+    },
+    "米哈游": {
+      "total_mentions": 9,
+      "incident_count": 2,
+      "incident_ratio": 0.22,
+      "health_status": "attention"
+    },
+    "小红书": {
+      "total_mentions": 9,
+      "incident_count": 1,
+      "incident_ratio": 0.11,
+      "health_status": "healthy"
+    },
+    "百度": {
+      "total_mentions": 8,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "四川准则": {
+      "total_mentions": 8,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "京东": {
+      "total_mentions": 8,
+      "incident_count": 3,
+      "incident_ratio": 0.38,
+      "health_status": "attention"
+    },
+    "唯品会": {
+      "total_mentions": 7,
+      "incident_count": 2,
+      "incident_ratio": 0.29,
+      "health_status": "attention"
+    },
+    "长亮科技": {
+      "total_mentions": 7,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "网易": {
+      "total_mentions": 7,
+      "incident_count": 2,
+      "incident_ratio": 0.29,
+      "health_status": "attention"
+    },
+    "海信": {
+      "total_mentions": 6,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "oppo": {
+      "total_mentions": 6,
+      "incident_count": 1,
+      "incident_ratio": 0.17,
+      "health_status": "healthy"
+    },
+    "武汉铁路局": {
+      "total_mentions": 6,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "边锋游戏": {
+      "total_mentions": 6,
+      "incident_count": 1,
+      "incident_ratio": 0.17,
+      "health_status": "healthy"
+    },
+    "中船": {
+      "total_mentions": 6,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "蓝信": {
+      "total_mentions": 5,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "跨越速运": {
+      "total_mentions": 5,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "作业帮": {
+      "total_mentions": 5,
+      "incident_count": 1,
+      "incident_ratio": 0.2,
+      "health_status": "attention"
+    },
+    "华为": {
+      "total_mentions": 4,
+      "incident_count": 3,
+      "incident_ratio": 0.75,
+      "health_status": "critical"
+    },
+    "云鲸智能": {
+      "total_mentions": 3,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "中信建投": {
+      "total_mentions": 3,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "猿辅导": {
+      "total_mentions": 3,
+      "incident_count": 1,
+      "incident_ratio": 0.33,
+      "health_status": "attention"
+    },
+    "乐信": {
+      "total_mentions": 2,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "九江银行": {
+      "total_mentions": 2,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "招商基金": {
+      "total_mentions": 2,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "中广核": {
+      "total_mentions": 2,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "卡斯柯": {
+      "total_mentions": 1,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    },
+    "博纳": {
+      "total_mentions": 1,
+      "incident_count": 0,
+      "incident_ratio": 0.0,
+      "health_status": "healthy"
+    }
+  },
+  "product_progress": {
+    "Drive": {
+      "weekly_mentions": 20,
+      "activity_level": "medium",
+      "recent_activities": [
+        [
+          "20250922",
+          "* Drive"
+        ],
+        [
+          "20250915",
+          "* Drive"
+        ],
+        [
+          "20250908",
+          "* 广东电信-升级Drive"
+        ],
+        [
+          "20250908",
+          "* Drive"
+        ],
+        [
+          "20250901",
+          "* Drive"
+        ]
+      ]
+    },
+    "应用表格": {
+      "weekly_mentions": 30,
+      "activity_level": "high",
+      "recent_activities": [
+        [
+          "20250908",
+          "* 应用表格创建引用表报错问题"
+        ],
+        [
+          "20250908",
+          "* 应用表格"
+        ],
+        [
+          "20250901",
+          "* 应用表格"
+        ],
+        [
+          "20250826",
+          "* SaaS 应用表格50% 无法编辑保存故障报告： [https://shimo.im/docs/O4RIs4J74BPWK92x](https://shimo.im/docs/O4RIs4J74BPWK92x)"
+        ],
+        [
+          "20250818",
+          "* 应用表格"
+        ]
+      ]
+    },
+    "轻文档": {
+      "weekly_mentions": 14,
+      "activity_level": "medium",
+      "recent_activities": [
+        [
+          "20251124",
+          "* 轻文档重构"
+        ],
+        [
+          "20251117",
+          "* 修复移动端轻文档滑动、排版问题。"
+        ],
+        [
+          "20251103",
+          "* 轻文档重构上灰度gate，1/62流量"
+        ],
+        [
+          "20250915",
+          "* 新轻文档 自动化测试方案调通"
+        ],
+        [
+          "20250818",
+          "* 根据Saas停的一些需求，把人抽到轻文档来做"
+        ]
+      ]
+    },
+    "专业文档": {
+      "weekly_mentions": 21,
+      "activity_level": "high",
+      "recent_activities": [
+        [
+          "20250930",
+          "* 专业文档"
+        ],
+        [
+          "20250922",
+          "* 专业文档"
+        ],
+        [
+          "20250908",
+          "* 专业文档 AI，html到word"
+        ],
+        [
+          "20250826",
+          "* 专业文档"
+        ],
+        [
+          "20250818",
+          "* 专业文档"
+        ]
+      ]
+    },
+    "表格计算": {
+      "weekly_mentions": 13,
+      "activity_level": "medium",
+      "recent_activities": [
+        [
+          "20251124",
+          "* 表格计算"
+        ],
+        [
+          "20251120",
+          "* 表格计算"
+        ],
+        [
+          "20250930",
+          "* 跨表格计算导出超时问题"
+        ],
+        [
+          "20250908",
+          "* 表格计算"
+        ],
+        [
+          "20250901",
+          "* 表格计算灰度"
+        ]
+      ]
+    },
+    "极速SDK": {
+      "weekly_mentions": 15,
+      "activity_level": "medium",
+      "recent_activities": [
+        [
+          "20251110",
+          "* 极速SDK 与标准 SDK 集成"
+        ],
+        [
+          "20251103",
+          "*  极速SDK 与标准 SDK 集成"
+        ],
+        [
+          "20251027",
+          "* 极速SDK 与标准 SDK 集成"
+        ],
+        [
+          "20251120",
+          "* 极速SDK开发"
+        ],
+        [
+          "20250930",
+          "* 极速SDK合并到标准SDK PRD"
+        ]
+      ]
+    },
+    "流程图": {
+      "weekly_mentions": 5,
+      "activity_level": "low",
+      "recent_activities": [
+        [
+          "20250310",
+          "* 流程图调研"
+        ],
+        [
+          "20250310",
+          "* mermaid，适合ai，但图没有真正流程图好看。[https://www.mermaidchart.com/mermaid-ai](https://www.mermaidchart.com/mermaid-ai)"
+        ],
+        [
+          "20251027",
+          "* 存在一定风险（开发流程图的也需要搞大预览，时间实际上个半月）"
+        ],
+        [
+          "20251113",
+          "* 流程图连线优化"
+        ],
+        [
+          "20250930",
+          "* 流程图PRD"
+        ]
+      ]
+    },
+    "AI": {
+      "weekly_mentions": 15,
+      "activity_level": "medium",
+      "recent_activities": [
+        [
+          "20251110",
+          "* 海外AI"
+        ],
+        [
+          "20251110",
+          "* 联系到比较厉害的人，做过AIPPT，带团队的核心人员"
+        ],
+        [
+          "20251103",
+          "* 和刘超，吴冰聊了下AI"
+        ],
+        [
+          "20250908",
+          "* AI知识库雏形OK"
+        ],
+        [
+          "20250908",
+          "* 专业文档 AI，html到word"
+        ]
+      ]
+    },
+    "协同编辑": {
+      "weekly_mentions": 9,
+      "activity_level": "low",
+      "recent_activities": [
+        [
+          "20250310",
+          "* 性能问题（协同编辑，预计还要9个月）"
+        ],
+        [
+          "20250224",
+          "* 协同编辑 todo"
+        ],
+        [
+          "20250217",
+          "* 协同编辑历史，幻灯片100%，专业文档10%"
+        ],
+        [
+          "20250217",
+          "* 轻文档协同编辑，准备灰度"
+        ],
+        [
+          "20250113",
+          "* 协同编辑会出现雪崩场景"
+        ]
+      ]
+    },
+    "导入导出": {
+      "weekly_mentions": 5,
+      "activity_level": "low",
+      "recent_activities": [
+        [
+          "20250804",
+          "* 导入导出对接问题排查解决。"
+        ],
+        [
+          "20250331",
+          "* 导入导出"
+        ],
+        [
+          "20250317",
+          "* 导入导出代码交付，二阶段验收"
+        ],
+        [
+          "20250217",
+          "* 导入导出 米哈游的研发不知道没有源码交付"
+        ],
+        [
+          "20251124",
+          "* 生产导入导出预览问题排查修复。"
+        ]
+      ]
+    }
+  },
+  "incidents": {
+    "total_incidents": 420,
+    "monthly_distribution": {
+      "2025-01": 17,
+      "2025-02": 5,
+      "2025-03": 28,
+      "2025-04": 41,
+      "2025-06": 30,
+      "2025-07": 37,
+      "2025-08": 36,
+      "2025-09": 46,
+      "2025-10": 24,
+      "2025-11": 133,
+      "2025-12": 23
+    },
+    "client_incidents": {
+      "滴滴": 8,
+      "好未来": 6,
+      "华为": 3,
+      "京东": 3,
+      "唯品会": 2,
+      "米哈游": 2,
+      "网易": 2,
+      "天翼云盘": 2,
+      "作业帮": 1,
+      "oppo": 1
+    },
+    "recent_incidents": [
+      {
+        "date": "20250818",
+        "description": "* co-sdk-1.3.3 已交付内部上线使用，移动端上传图片、文档事件通知的对接问题处理。"
+      },
+      {
+        "date": "20250818",
+        "description": "* co-sdk-1.3.2 非标部署生产切换到客户中间件，mongo与对象存储问题解决。"
+      },
+      {
+        "date": "20250818",
+        "description": "* 腾讯云TKE部署测试环境，滴滴环境验证及问题解决，部署日志和监控服务。"
+      },
+      {
+        "date": "20250818",
+        "description": "* 测试环境升级完成，QA验证问题处理，企业微信登录、群组信息、表格下载公式超时问题。"
+      },
+      {
+        "date": "20250818",
+        "description": "* 测试升级co-1.3.2已完成，客户验收未反馈Bug，生产计划8月23日升级。"
+      },
+      {
+        "date": "20250818",
+        "description": "|猿辅导大面积提示同步失败|猿辅导|P0|[https://shimo.im/docs/FJtIqRyCKzwN7rmG](https://shimo.im/docs/FJtIqRyCKzwN7rmG"
+      },
+      {
+        "date": "20250818",
+        "description": "|北京凯读全站登录异常|北京凯读|P0|[https://shimo.im/docs/0rfpD2FNyMTbfzqZ](https://shimo.im/docs/0rfpD2FNyMTbfzqZ)"
+      },
+      {
+        "date": "20250818",
+        "description": "|小红书大面积出现表格打不开|小红书|P0|[https://shimo.im/docs/ZiSNgKoNn8oGwgfw](https://shimo.im/docs/ZiSNgKoNn8oGwgf"
+      },
+      {
+        "date": "20250818",
+        "description": "|京东大面积404报错|京东|P1|[https://shimo.im/docs/6l7mfIhrFzt9SUrG](https://shimo.im/docs/6l7mfIhrFzt9SUrG)|"
+      },
+      {
+        "date": "20250818",
+        "description": "|Saas用户表单数据不同步到关联的表格|SaaS|P1|[https://shimo.im/docs/ccd3N867hZASGZNK](https://shimo.im/docs/ccd3N867"
+      }
+    ]
+  },
+  "personnel": {
+    "total_events": 50,
+    "events": [
+      {
+        "date": "20250811",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250811",
+        "event": "* 前端陈阳HC拆成一个中级前端和初级后端，彭友顺代理前端组长"
+      },
+      {
+        "date": "20250804",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250804",
+        "event": "* 组织架构调整"
+      },
+      {
+        "date": "20250804",
+        "event": "* 文萱做产品负责人，半年试用期"
+      },
+      {
+        "date": "20250728",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250721",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250714",
+        "event": "* 人员：本周已经去一半人"
+      },
+      {
+        "date": "20250707",
+        "event": "* 本周在腾讯云TKE部署测试环境，服务配置调整验证中，周四滴滴对接人休假暂停中。"
+      },
+      {
+        "date": "20250707",
+        "event": "* 预生产部署完成，配置调整测试验证问题处理。"
+      },
+      {
+        "date": "20250707",
+        "event": "* 人员全部到zoom"
+      },
+      {
+        "date": "20250630",
+        "event": "* 第二套生产环境搭建，客户侧服务器根目录不达标问题沟通，协商客户侧调整未果，评估调整部署目录的可行性及风险同步，基本环境已部署完成，对象存储数据首次同步已完成；停服后迁移中间件、Minio数据。"
+      },
+      {
+        "date": "20250630",
+        "event": "* 滴滴升级方案沟通，滴滴调整部署硬件，使用腾讯云serverless 方案我方评估不可行，确定使用标准TKE集群，待滴滴资源准备就绪后部署。"
+      },
+      {
+        "date": "20250630",
+        "event": "* zoom人员安排"
+      },
+      {
+        "date": "20250630",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250616",
+        "event": "* 滴滴升级方案沟通，滴滴期望采用上次只读不停机方式，沟通中了解到他们部了2套石墨环境，我们需要支持2套环境的升级，由于涉及到许可证绑定问题，调整方案升级CO1.3"
+      },
+      {
+        "date": "20250428",
+        "event": "* svc-table grpc调用超时问题处理，根据客户需求调整石墨访问端口"
+      },
+      {
+        "date": "20250428",
+        "event": "* 人员安排"
+      },
+      {
+        "date": "20250421",
+        "event": "* 评估cache调整为单节点的风险"
+      },
+      {
+        "date": "20250421",
+        "event": "* 存储问题导致mongo,minio重启，原因是客户的存储网络调整导致."
+      },
+      {
+        "date": "20250421",
+        "event": "* 1 补齐这块文档，需要有架构流程图，不要把go和rust文档拆开，变成类似于帮助文档，现在运维人员角度去写。我们的目的是教会sre和后面代理商"
+      },
+      {
+        "date": "20250421",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250331",
+        "event": "* 与商务、客户侧技术讲解文档操作流程，沟通注意事项风险，准备测试环境的迁移；商务侧联系的现场支持人员未确认执行，现商务提出要去现场支持，目前暂无人员可支持。"
+      },
+      {
+        "date": "20250331",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250324",
+        "event": "* 私有化之前成本只考虑了基础运维成本，没考虑定制化的维护，成本计算器要调整"
+      },
+      {
+        "date": "20250324",
+        "event": "* 人员问题"
+      },
+      {
+        "date": "20250303",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250224",
+        "event": "* 人员变动"
+      },
+      {
+        "date": "20250217",
+        "event": "* 离职人员"
+      },
+      {
+        "date": "20251229",
+        "event": "* 人员"
+      },
+      {
+        "date": "20251222",
+        "event": "* 人员，工位调整"
+      },
+      {
+        "date": "20251222",
+        "event": "* 工位调整"
+      },
+      {
+        "date": "20251215",
+        "event": "* 人员"
+      },
+      {
+        "date": "20251124",
+        "event": "* cas登录通讯录人员显示问题排查修复。"
+      },
+      {
+        "date": "20251117",
+        "event": "* 调整生产品牌标识logo"
+      },
+      {
+        "date": "20251110",
+        "event": "* License更新调整过期和套件开放"
+      },
+      {
+        "date": "20251110",
+        "event": "* 联系到比较厉害的人，做过AIPPT，带团队的核心人员"
+      },
+      {
+        "date": "20251103",
+        "event": "* 中间件调整，对象存储内外网地址的调测"
+      },
+      {
+        "date": "20251103",
+        "event": "* 找到核心人员"
+      },
+      {
+        "date": "20251027",
+        "event": "* 中间件调整，对象存储内外网地址的调测"
+      },
+      {
+        "date": "20251120",
+        "event": "次次责：前端告警群全体人员，未在第一时间对告警进行处理"
+      },
+      {
+        "date": "20251113",
+        "event": "* 新入职一个"
+      },
+      {
+        "date": "20250930",
+        "event": "* sdk 3个月，drive 1个月，版本周期调整"
+      },
+      {
+        "date": "20250930",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250901",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250826",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250826",
+        "event": "* 自动化测试离职"
+      },
+      {
+        "date": "20250818",
+        "event": "* 调整生kibana日志存储时间，由于没有字段索引，尝试全量拉取日志导出分析。"
+      },
+      {
+        "date": "20250818",
+        "event": "* 人员"
+      },
+      {
+        "date": "20250818",
+        "event": "* 前端组长都1v1聊完过，并开周会"
+      }
+    ]
+  }
+}
