@@ -1,0 +1,648 @@
+发布内容,发布服务,发布分支,commit id号以及 msg,发布环境,产品线,影响范围,发布时间,发布owner,测试责任人,测试验收情况,研发责任人,研发验收情况,备注
+url和实际的filetype不一样时，跳转到实际的url,cougar、lizard-one,release-20260127,"cougar: 1b62d4bc fix(naviate-filetype): filetype跟RouteType不一致时，跳转到正确的RouteType
+lizard-one: ed4d28b8 fix(naviate-filetype): filetype跟路由不一致时，跳转到正确的路由","gate
+pro",主站,套件路由跳转,2026/2/3 21:00,陈在宏,骆寿祥,,陈在宏,,
+"- 修复创建副本时日期提醒复制错误的问题
+- 修复关联引用时，主键列修改为日期时间后，关联引用单元格更新为空的问题
+- 修复创建副本后多行文本列丢失富文本格式的问题",svc-table,fix/motable,49ea306d,"gate
+pro",应用表格,创建副本、关联引用,2026/1/29 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+svc-auth 代理对企业逻辑调整版本发布,svc-auth,hotfix/cd115687/doc-v2,5eed04d9,pro,后端,新版本轻文档代理,2026/1/27 23:00,杜旻翔,,,杜旻翔,已验收,
+svc-auth 代理对企业逻辑调整版本发布,svc-auth,hotfix/cd115687/doc-v2,5eed04d9,gate,后端,新版本轻文档代理,2026/1/26 23:00,杜旻翔,,,杜旻翔,已验收,
+"fix: 修复全选设置行高后无法给有内容的行设置比上述更小的行高
+修复输入跨sheet公式时，被选择的sheet A1单元格如果是文本格式，控制台会出现报错，无法选择范围",lizard-service-sheet-sdk,release-20251216,fix: 修复全选设置行高后无法给有内容的行设置比上述更小的行高 377be0e000809dc084f14f5235abd9ef9154a51e,"pre
+gate
+pro",专业表格,公式输入，行高设置,2026/1/26 21:00,王珂珂,程杰,,王珂珂,已验收,
+高级权限灰度比例0 -> 30%,svc-table,fix/motable,5b45e072,"gate
+pro",应用表格,高级权限功能,2026/1/23 21:00,唐彪,叶慧玥,已验收,唐彪,,
+"- 修复应用表格从模版库创建工作表时白屏的问题
+- 修复tablelist tab被遮挡问题
+- 修复历史打开后表格被遮挡",table-sdk,release-20260120,58455f8: style：修复 tablelist tab 被遮挡问题、历史打开表格被遮挡,"gate
+pro",应用表格,从模版库创建工作表、历史显示,2026/1/23 21:00,柯特,叶慧玥,已验收,柯特,,
+"-修复撤销删除关联引用列保存失败
+-高级权限灰度比例0 -> 30%",svc-table,fix/motable,e650292c,"gate
+pro",应用表格,"-关联引用列撤销删除操作
+-高级权限功能",2026/1/22 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,灰度比例已回滚
+"- 修复关联引用列撤销删除的逻辑
+- 修复表格转应用表格接口5xx的问题
+- 补齐高级权限中关联引用/引用表逻辑
+- 修复单条记录的子任务展开/收起icon不显示的问题",table-sdk,release-20260120,adb49f2: fix: 修复子任务展开按钮宽高问题,"gate
+pro",应用表格,关联引用、表格转应用表格,2026/1/22 22:00,柯特,叶慧玥,已验收,柯特,已验收,
+"新轻文档预览灰度：PRO -个人文件 -
+比例 62/62（100%）",无,无,修改配置,pro,轻文档,个人公开只读文件预览,2026/1/22 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+• 修复轻文档 doc 格式导入 ,office-light-rs ,release,7ddf3745,"gate
+pro",轻文档,轻文档导入,2026/1/22 21:00,郑细弯,骆寿祥,已验收,郑细弯,已验收,
+修改微信内置浏览器中访问轻文档内的外部链接的提示文案,lizard-service-doc-sdk,develop,4ed643d6: fix: 修改黑名单链接的提示文案,"pre
+gate
+pro",轻文档,轻文档点击外链时的提示文案,2026/1/19 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+ix(import): 导入兼容非法结构图片,office-light-rs ,release,98fdcd80,"gate
+pro",轻文档,轻文档导入,2026/1/19 21:00,郑细弯,郑细弯,已验收,郑细弯,已验收,
+支付回调异常bug 修复,svc-billing,release,a47c04ec  Merge branch 'fix/alipay-callback-gbk-charset' into 'release',pro,后端,支付回调,2026/1/17 20:00,王洋洋,,,王洋洋,已验收,
+支付回调异常bug 修复,svc-billing,release,a47c04ec  Merge branch 'fix/alipay-callback-gbk-charset' into 'release',gate,后端,支付回调,2026/1/16 20:00,王洋洋,,,王洋洋,已验收,
+应用表格高级权限后端,"svc-table
+svc-history","svc-table:fix/motable
+svc-history:
+hotfix/table-common",8e2f652c,"gate
+pro",应用表格,应用表格功能,2026/1/15 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+应用表格高级权限,table-sdk,release-20251225-advanced-permission,870a011: refactor: 优化记录编辑器的处理逻辑，确保新插入记录的正确传递,pro,应用表格,应用表格功能,2026/1/15 22:00,柯特,叶慧玥,已验收,柯特,已验收,
+举报按钮优化,"lizard-one
+cougar-mobile-web
+lizard-service-doc-sdk","release-20260106
+release-20260106
+develop","one：fa8ccb09
+cougar：6a3a061","gate
+pro",主站,举报按钮,2026/1/15 21:00,"梁洺睿
+熊智",叶慧玥,已验收,"梁洺睿
+熊智",已验收,
+"表格导入导出：
+1.表格导入文本框丢失
+2.表格导入字体颜色异常",office-excel-rs,develop,8f5be1fc,"gate
+pro",专业表格,表格导入,2026/1/15 21:00,陆俊杰,程杰,已验收,陆俊杰,已验收,
+新轻文档新建菜单创建套件也需要弹出模板库弹窗，编辑器兼容低版本浏览器,cougar-mobile-web,release-20250106,88e7a0ed fix(editor-create-menu): 新建菜单创建套件也需要弹出模板库弹窗,"gate
+pro
+pre",轻文档,新轻文档新建菜单，回归新轻文档编辑器,2026/1/15 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+禁止在微信内置浏览器中访问轻文档内的外部链接,lizard-service-doc-sdk,develop,12f1a251: fix: 微信内外部链接统一识别为黑名单,"gate
+pro
+pre",轻文档,微信浏览器中，轻文档内访问外部链接,2026/1/15 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+"新轻文档预览灰度：PRO -个人文件 -
+比例 38/62（60%）",无,无,修改配置,pro,轻文档,个人公开只读文件预览,2026/1/14 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+saas贺岁活动,"lizrd-one
+lizard-homepage",release-20260106,"homepage:d95fbbd
+one:695995f3",pro,主站,个人版购买会员，以及一些,2026/1/14 21:00,熊智,骆寿祥,已验收,熊智,已验收,
+新轻文档补充错误日志上报、修复部分旧文档格式,cougar-mobile-web,release-20251230,ceded33ab:feat(share): 默认开启公开分享时 7 天有效,"gate
+pro
+pre",轻文档,新轻文档错误日志,2026/1/13 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+"移除轻文档微信二维码检查
+修改公开分享链接有限期默认值为7天","lizard-one
+cougar-mobile-web","release-20251230
+release-20251230","69a5b47f5:feat(share): 默认开启公开分享时 7 天有效
+ceded33ab:feat(share): 默认开启公开分享时 7 天有效","gate
+pre
+pro","主站
+轻文档",公开分享链接有效期,2026/1/13 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+修复ctrl+w关闭窗口导致单元格内容被清空,lizard-service-sheet-sdk,release-20251216,a06e85d9db6b0183d11d420e8044abd7e3dfcc90 chore: 补全修饰符key判断,"pre
+gate
+pro",专业表格,单元格输入，快捷键,2026/1/12 21:00,王珂珂,程杰,已验收,王珂珂,已验收,
+轻文档微信二维码检查（文案修改）,"lizard-one
+cougar-mobile-web","release-20251230
+release-20251230","a6384e2f: fix(share): 修改提示文案
+2e5c472b: chore: ci update translations","gate
+pre
+pro","主站
+轻文档",轻文档打开公开分享,2026/1/12 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+"• 打开 rs2 付费用户灰度开关 
+• 获取单元格数据 OpenAPI 增加限制：
+ ∘ 限制单次获取的单元格数量5000个
+ ∘ 限制单个文件一分钟最多调用100次
+",svc-sheet,release-saas,,"gate
+pro",后端,"跨表引用、表格合并；获取单元格数据开放接口
+",2026/1/8 22:00,段律,程杰,,段律,已验收,
+修复轻文档代理产生的 500 问题,svc-auth,hotfix/cd115687/doc-v2,257d4dfc,"pro
+gate",后端,轻文档代理,2026/1/8 22:00,杜旻翔,,,杜旻翔,已验收,
+轻文档微信二维码检查(文件更多菜单入口),"lizard-one
+cougar-mobile-web
+doc-sdk","release-20251230
+release-20251230
+develop","ac4fa9ed: feat(share-switch): add check for WeChat QR codes to prevent sharing
+6117aa2b: fix(share): qrcode check in editor menu
+4078573c: fix: 修复css加载顺序问题","gate
+pre
+pro","主站
+轻文档",轻文档打开公开分享,2026/1/8 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+修复win+d切换窗口导致单元格内容被清空,lizard-service-sheet-sdk,release-20251216,c53704bc938299625f6dcb8a67433e2dedd011bf: fix: 修复win+d键切换窗口时会清除单元格内容,"pre
+gate
+pro",专业表格,单元格输入，快捷键,2026/1/8 21:00,王珂珂,程杰,已验收,王珂珂,已验收,
+fix: [PUBLIC-1897-2]修复DELIVER-3570导致普通跨页元素在重排时被截断文本的问题,lizard-service-docx-sdk,release-20260106,4c443cbce36d7a14f989ba83e9ea5bec4ab5aaa1,"pro
+gate",传统文档,传统文档编辑,2026/1/8 21:00,万捷,骆寿祥,已验收,万捷,已验收,
+轻文档微信二维码检查,"lizard-one
+cougar-mobile-web
+doc-sdk","release-20251230
+release-20251230
+develop","ac4fa9: feat(share-switch): add check for WeChat QR codes to prevent sharing
+d1950cd0: feat(share): qrcode","gate
+pro
+pre","轻文档
+主站",轻文档打开公开分享,2026/1/7 22:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,已回滚
+用户注册流程强制要求极验验证码,svc-auth,hotfix/cd115687/doc-v2,1b115964,"pro
+gate",后端,新用户注册,2026/1/7 22:00,杜旻翔,叶慧玥,已验收,杜旻翔,已验收,
+修复通过关联引用卡片连续新增外表的记录提示数据表被删除的问题,table-sdk,release-20251209,6da7538: refactor: 优化记录编辑器的处理逻辑，确保新插入记录的正确传递,"gate
+pro",应用表格,关联引用卡片,2026/1/7 21:00,柯特,叶慧玥,已验收,柯特,已验收,
+修复图表渲染报错的问题,lizard-service-sheet-sdk,release-20251216,6b77c91: fix: 尝试修复图表打包后渲染报错的问题,"pre
+gate
+pro",专业表格,图表,2026/1/7 21:00,刘义杨,程杰,已验收,刘义杨,已验收,
+"新轻文档预览灰度：PRO -个人文件 -
+比例 18/62（30%）",无,无,修改配置,pro,轻文档,个人公开只读文件预览,2026/1/7 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+应用表格高级权限,table-sdk,release-20251225-advanced-permission,870a011: refactor: 优化记录编辑器的处理逻辑，确保新插入记录的正确传递,gate,应用表格,应用表格功能,2026/1/7 21:00,柯特,叶慧玥,已验收,柯特,已验收,代码灰度，主要观察对现有逻辑有无影响，持续观察中
+应用表格高级权限,"svc-table
+app-api
+svc-file
+svc-user
+svc-history","svc-table:fix/motable
+app-api: release
+svc-file: release
+svc-user: release-saas
+svc-history: hotfix/table-common","svc-table: 6a95a824
+app-api: 5f69e069
+svc-file: 1e482e8f
+svc-user: fe9113e5
+svc-history: 4220f7b8",gate,应用表格,应用表格功能,2026/1/6 23:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+应用表格高级权限,"app-api
+svc-file
+svc-user","app-api: release
+svc-file: release
+svc-user: release-saas","app-api: 5f69e069
+svc-file: 1e482e8f
+svc-user: fe9113e5
+","gate
+pro",后端,应用表格功能,2026/1/6 23:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+应用表格高级权限相关错误码,"lizard-one
+cougar",release-20251230,"one：18b07830
+cougar：256252（理论是最新分支，由轻文档代发）","gate
+pro",主站,暂无影响,2026/1/6 21:00,熊智,叶慧玥,已验收,熊智,已验收,cougar由轻文档在21点代发，对本需求无特殊影响
+添加compose请求适配器以支持外部引用表的baseGuid替换逻辑,table-sdk,release-20251209,67b99bc: feat: 添加 compose 请求适配器以支持外部引用表的 baseGuid 替换逻辑,"gate
+pro",应用表格,通过关联引用卡片修改记录内容,2026/1/6 21:00,柯特,叶慧玥,已验收,柯特,已验收,
+新轻文档更新只读模式的代码为最新代码,cougar,release-20251230,ac037021 fix(preview): 只读模式：可以剪切、重复loading、频繁请求,"gate
+pre
+pro",轻文档,新轻文档只读,2026/1/6 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+应用表格协作重构,svc-table,fix/motable,db71b05f,"gate
+pro",应用表格,应用表格编辑,2026/1/5 23:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+应用表格协作重构,table-sdk,release-20251209,b8ffc8d: fix: 修复数据表菜单中管理引用表的显示逻辑,"gate
+pro",应用表格,应用表格编辑,2026/1/5 23:00,柯特,叶慧玥,已验收,柯特,已验收,
+微信内置浏览器点击轻文档中外部链接，显示风险提示,lizard-service-doc-sdk,develop,"1aedc2: refactor: improve external link handling in WeChat browser by validating...
+","gate
+pro
+pre",轻文档,轻文档内访问外部链接,2026/1/5 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+新轻文档预请求，客服懒加载，错误日志区分,cougar,release-20251014,9918bc94：fix(prefetch): prefetch逻辑调整，客服只在需要用到的地方引入,"gate
+pro",轻文档,轻文档加载，七鱼客服,2026/1/4 21:00,陈在宏,骆寿祥,,陈在宏,,
+svc-auth pro 环境关闭 ssr,svc-auth,hotfix/cd115687/doc-v2,2a70bd5a,pro,后端,轻文档打开场景,2025/12/30 22:00,杜旻翔,,,杜旻翔,,
+- 解决表格导出行高问题,office-excel-rs,develop,a2c9df16,"gate
+pro",专业表格,表格导出,2025/12/30 21:00,陆俊杰,程杰,,陆俊杰,已验收,
+"fix: [BUSINESS-4554]修复图片水印不适配dpr问题
+fix: [BUSINESS-4612]修复取消上传远程图片后控制台报错
+fix: [BUSINESS-4610] 修复链接url显示错误
+fix: [DELIVER-3138]修复浮动段落的排版混乱
+fix: [DELIVER-3363]修复移动端拖动选择文本问题
+fix: [DELIVER-3540]修复修订时间显示的时区问题
+fix: [DELIVER-3489]修复En空格无法解析为空格导致修订时出现未知改动的问题
+fix: [DELIVER-3492]修复修订模式下在已删除文本中间插入内容时，修订记录有问题
+fix: [DELIVER-3535]修复缩进计算错误
+feat: 升级core-collaboration模块至2.0.5
+fix: [DELIVER-3138-2]修复浮动段落排版代码导致栈溢出
+fix:[PUBLIC-1852]修复DELIVER-3492移除revision缓存导致的过量请求用户信息
+fix: [DELIVER-3570]修复页面重排时多出来目录的问题
+fix: [PUBLIC-1849]修复创建目录时带图片，表格内容的问题
+fix: [PUBLIC-1845]修复移动端无法粘贴问题
+fix: [PUBLIC-1865]修复表格中段落应用framePr导致无法选取的问题",lizard-service-docx-sdk,release-20251223,eb09c200e414fb552ebb0d858f87aef0be7d58b6,"gate
+pro",传统文档,传统文档编辑,2025/12/30 21:00,万捷,骆寿祥,已验收,万捷,,
+修复表单附件下载无法打开的问题,lizard-service-form-sdk,release-2025-12-04,"65d4207
+fix: 附件下载无法打开的问题","gate
+pro",表单,表单附件下载,2025/12/30 21:00,刘义杨,沈合胜,已验收,刘义杨,已验收,
+切换到七鱼客服系统,"lizard-one
+cougar
+homepage","lizard-one、homepage：release-20251216
+cougar：release-20251014
+helpcenter-fe：master","lizard-one：待定
+homepage：7fbd8caf
+helpcenter-fe：fc0742a
+cougar：待定","gate
+pro",主站,留言咨询,2025/12/29 21:00,熊智,叶慧玥,已验收,熊智,,
+套件请求文件内容兜底逻辑调整,"lizard-one
+cougar","lizard-one: release-20251216
+cougar: release-20251014","lizard-one: 572da9be feat(qiyu): 使用七鱼客服替换智齿客服
+cougar: e4888c90 fix(dependency): cp后更新依赖","gate
+pro",轻文档,套件请求文件内容兜底逻,2025/12/29 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+"- 修复importRange/溢出型数组公式引用自动识别的日期格式后结果为数字的问题
+- 修复数据透视表计算字段数学运算优先级的问题
+- 修复附件/图片链接域名生成错误 & 回复评论后评论框消失
+- 修复www开头的链接地址无法点击跳转
+- 优化图表尺寸超出浏览器绘制canvas所支持的最大尺寸时给出提示
+- 修复合并单元格在打印预览/复制为图片的场景下且所在首行/首列被隐藏的情况下无法渲染单元格内容的问题
+- 修复特殊情况下单元格插入链接（选择工作表类型）后工具栏的状态不对的问题
+- 基于最近一个可编辑历史创建的版本禁止还原
+- 修复按颜色筛选选择一个色值后切换到按条件筛选，第一个条件展示的默认值不对
+- 修复windows部分低版本搜狗中文输入法不激活单元格无法输入的问题",lizard-service-sheet-sdk,release-20251216,95a9929e858821b9f51a881f3b072f85fa03c7f3  chore: 首屏请求时过滤掉无效过期content url请求,pro,专业表格,跨表格引用日期格式渲染，www开头的链接跳转，windows中文输入法单元格编辑，图表渲染，打印，数据透视表计算字段渲染,2025/12/29 21:00,"王珂珂
+刘义杨",程杰,,"王珂珂
+刘义杨",,
+错误日志、请求文件内容兜底逻辑调整,"lizard-one
+cougar","lizard-one: release-20251216
+cougar: release-20251014","gate: lizard-one: 5a087ee4 feat(request): 调整兜底请求方式
+cougar: e287db4f fix(file-content-backup): reapply ""fix(file-content-backup): 请求文件内容兜底流程修改""
+ 
+pro: lizard-one: ff304c90 Revert ""feat(table): 应用表格高级权限""
+cougar: 3a02796f Revert ""fix(file-content-backup): reapply ""fix(file-content-backup): 请求文件内容兜底流程修改""""","gate
+pro",轻文档,轻文档错误日志。需要验证能否正常打开,2025/12/26 21:00,陈在宏,骆寿祥,,陈在宏,,
+svc-auth 代理全部页面 cache 规则调整,svc-auth,release,ffc9047e,pro,后端,所有套件文档打开场景,2025/12/25 22:00,杜旻翔,,,杜旻翔,已验收,
+"- 解决csv导入乱码问题
+- 带数据透视图表格导入异常bug",office-excel-rs,develop,692ba6ed,"gate
+pro",专业表格,csv文件导入，带数据透视图表格导入,2025/12/25 21:30,陆俊杰,程杰,已验收,陆俊杰,已验收,
+- 轻文档导入重构,office-light-doc-rs,release,dfc3d6f7 chore: update version 0.8.0,gate,轻文档,轻文档导入,2025/12/25 21:30,田雪嵩,骆寿祥,已验收,田雪嵩,已验收,
+用户名片 部分场景下隐藏邮箱信息,"lizard-one
+cougar","lizard-one：release-20251216
+cougar：release-20251014","lizard-one：e26bac28
+couagr：ab7a0a0e","gate
+pro",主站,弹出用户名片的所有场景      ,2025/12/25 21:00,熊智,叶慧玥,已验收,熊智,已验收,
+用户名片 部分场景下隐藏邮箱信息,,,,"gate
+pro",后端,弹出用户名片的所有场景      ,2025/12/25 21:00,郑伟,叶慧玥,已验收,郑伟,,
+"- 修复importRange/溢出型数组公式引用自动识别的日期格式后结果为数字的问题
+- 修复数据透视表计算字段数学运算优先级的问题
+- 修复附件/图片链接域名生成错误 & 回复评论后评论框消失
+- 修复www开头的链接地址无法点击跳转
+- 优化图表尺寸超出浏览器绘制canvas所支持的最大尺寸时给出提示
+- 修复合并单元格在打印预览/复制为图片的场景下且所在首行/首列被隐藏的情况下无法渲染单元格内容的问题
+- 修复特殊情况下单元格插入链接（选择工作表类型）后工具栏的状态不对的问题
+- 基于最近一个可编辑历史创建的版本禁止还原
+- 修复按颜色筛选选择一个色值后切换到按条件筛选，第一个条件展示的默认值不对
+- 修复windows部分低版本搜狗中文输入法不激活单元格无法输入的问题",lizard-service-sheet-sdk,release-20251216,95a9929e858821b9f51a881f3b072f85fa03c7f3  chore: 首屏请求时过滤掉无效过期content url请求,gate,专业表格,跨表格引用日期格式渲染，www开头的链接跳转，windows中文输入法单元格编辑，图表渲染，打印，数据透视表计算字段渲染,2025/12/25 21:00,王珂珂,程杰,已验收,王珂珂,已验收,
+应用表格修复公式列更新数据格式保存失败,svc-table,fix/motable,a2715846,"gate
+pro",应用表格,公式列更新数据格式,2025/12/24 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+svc-auth 代理全部页面 cache 规则调整,svc-auth,hotfix/cd115687/doc-v2,2a80ac67,gate,后端,所有套件文档打开场景,2025/12/24 22:00,杜旻翔,,,杜旻翔,已验收,
+修复文件服务内存超限问题,svc-file,release,ee9cc4c8,"gate
+pro",后端,文件服务,2025/12/23 23:00,王洋洋,,,王洋洋,已验收,
+发布七鱼客服系统页面 qiyu.html，调整ingress路由,ngserver,ngserver,f95ebd91,pro,其他,新增页面及路由，对业务无直接影响,2025/12/23 22:00,罗沙,,,熊智,已验收,
+错误日志,"lizard-one
+cougar","lizard-one: release-20251209
+cougar: release-20251014","lizard-one: 75e84fa6 chore: 细化日志
+cougar: cef978b5 fix(error-log): 错误日志添加currentTime","gate
+pro",轻文档,老轻文档错误日志。需要验证能否正常打开,2025/12/23 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+广告新增企业类型：企业付费过期，企业使用过期,ad-platform，svc-ads-go,ad-platform：release，svc-ads-go：hotfix-release,ad-platform：767051ad  svc-ads-go：8313d0b6,pro,其他,saas 弹出广告,2025/12/23 18:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+支持匿名用户的 contentURL 获取接口上线,app-api,release,62cb93ef,"gate
+pro",后端,匿名用户获取文件内容,2025/12/22 22:00,杜旻翔,,,杜旻翔,已验收,
+应用表格编辑保存失败修复与5xx请求修复,svc-table,fix/motable,3651d93d,"gate
+pro",应用表格,公式列转换首次填写时间/最后填写时间；前端异常compose导致的数据异常,2025/12/22 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+新轻文档错误日志,cougar-mobile-web,release-20251014,2e4a0529 fix(error-log): 区分兜底获取失败的错误日志,"gate
+pro",轻文档,新轻文档错误日志（需要验证是否能正常打开，移动端也需要,2025/12/19 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+一键整理改名自动归档旧快捷方式并新增提示语,lizard-one,release-20251209,"fix(log): getFileContentUrl log添加requestUrl
+「d13cf305a6126b436c6e443622d42c72dbee6ab8」理论是需要发最新的，此项发布为常规上线流程，不单指某一功能的发布，此项填写后，后续可能会有hotfix新增，此时就不能按此项填写内容发布，需要提前沟通","gate
+pro",主站,一键整理的相关弹窗文案更改,2025/12/18 21:00,熊智,叶慧玥,已验收,熊智,已验收,
+新轻文档错误日志,cougar-mobile-web,release-20251014,4f293f81 fix(error-log): 添加阻塞只读轻文档加载接口的错误日志上报,"gate
+pro",轻文档,新轻文档错误日志（需要验证是否能正常打开，移动端也需要,2025/12/18 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+- 解决csv导入oom问题,office-table-rs,v-0.1.x,9b01da64,"gate
+pro",应用表格,csv文件导入,2025/12/17 22:30,陆俊杰,叶慧玥,已验收,陆俊杰,已验收,
+"- 升级依赖修复监控误报问题
+- 解决csv导入oom问题",office-excel-rs,develop,42aa334e,"gate
+pro",专业表格,csv文件导入,2025/12/17 22:00,陆俊杰,程杰,已验收,陆俊杰,已验收,
+修改隐私协议中的“个人信息保护负责人”联系方式,lizard-project-static,release-20251104,68fc549   feat: 更新个人信息保护人联系方式,"gate
+pro",主站,主站隐私保护政策页面,2025/12/17 21:00,刘津玮,叶慧玥,已验收,刘津玮,已验收,
+新轻文档getFileContent错误日志,cougar-mobile-web,release-20251014,bcb4e614 fix(error-fatal): 获取文件失败上报错误，忽略访问被删除文件等错误的上报,gate,轻文档,新轻文档错误日志（需要验证是否能正常打开,2025/12/17 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+- excel导入再导出提示修复,office-excel-rs,develop,6b3125e4,"gate
+pro",专业表格,带有数据透视表的表格导入导出,2025/12/16 21:30,陆俊杰,程杰,已验收,陆俊杰,已验收,
+- 升级依赖修复监控误报问题,"office-word-rs
+","develop
+","d427a051chore: update owf-client
+","gate
+pro",传统文档,无,2025/12/16 21:00,杜璞,,,蒋诗曲,已验收,
+"- 修复importRange/溢出型数组公式引用自动识别的日期格式后结果为数字的问题
+- 修复数据透视表计算字段数学运算优先级的问题
+- 修复附件/图片链接域名生成错误 & 回复评论后评论框消失
+- 修复www开头的链接地址无法点击跳转
+- 优化图表尺寸超出浏览器绘制canvas所支持的最大尺寸时给出提示
+- 修复合并单元格在打印预览/复制为图片的场景下且所在首行/首列被隐藏的情况下无法渲染单元格内容的问题
+- 修复特殊情况下单元格插入链接（选择工作表类型）后工具栏的状态不对的问题
+- 基于最近一个可编辑历史创建的版本禁止还原
+- 修复按颜色筛选选择一个色值后切换到按条件筛选，第一个条件展示的默认值不对
+- 修复windows部分低版本搜狗中文输入法不激活单元格无法输入的问题",lizard-service-sheet-sdk,release-20251216,95a9929e858821b9f51a881f3b072f85fa03c7f3  chore: 首屏请求时过滤掉无效过期content url请求,pre,专业表格,跨表格引用日期格式渲染，www开头的链接跳转，windows中文输入法单元格编辑，图表渲染，打印，数据透视表计算字段渲染,2025/12/16 21:00,王珂珂,程杰,已验收,"王珂珂
+刘义杨",已验收,
+表格首屏缓存优化：不请求过期的content url,lizard-service-sheet-sdk,release-20251104,6e3c1fca16c44d5c7cb312a7cbeb5e1cd34321e2  chore: 首屏请求时过滤掉无效过期content url请求,"gate
+pro",专业表格,表格首屏缓存加载,2025/12/15 21:00,王珂珂,程杰,已验收,王珂珂,已验收,
+- 升级依赖修复监控误报问题,"office-ppt-rs
+office-lightdoc-rs
+",release,0e58e88dchore: update owf-client,"gate
+pro","轻文档
+幻灯片",无,2025/12/15 18:30,杜璞,,,杜璞,已验收,
+错误日志: 增加日志对比客户端/服务器时间,lizard-one,release-20251202,fd87de62 chore: 增加日志对比客户端/服务器时间,"gate
+pro","轻文档
+专业表格",错误日志。需要验证是否能正常打开套件,2025/12/12 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+"Hotfix: 单元格样式字段风格修复, 现在会正确的对不同字段提供不同风格的 key",svc-sheet,calc-engine-saas,"826f3396: chore(calc): 更新 CalcEngine 版本, 解决 Style 字段风格问题",gate,专业表格,ImportRange 引用到了非付费用户创建的表格,2025/12/12 12:45,胡星宇,,不需要,胡星宇,已验收,
+"- 导入导出增加行列重复字段
+- 导出表格名称修复
+- 数据透视表导入时name重复bug修复",office-excel-rs,develop,597a4cf2,"gate
+pro",专业表格,带有数据透视表的表格导入导出,2025/12/11 21:30,陆俊杰,程杰,已验收,陆俊杰,已验收,
+"- 优化 txt 导入
+- fix: https://jira.shimo.run/browse/PUBLIC-1661
+- 增加监控指标",office-light-doc-rs,master,7223e4a9,"gate
+pro",轻文档,"轻文档 txt 导入
+docx 导入",2025/12/11 21:00,杜璞,骆寿祥,已验收,"杜璞
+田雪嵩",已验收,
+"-「内部改进」调整监控指标
+- 升级部分依赖",office-ppt-rs,release,16e733c2,"gate
+pro",幻灯片,无,2025/12/11 21:00,杜璞,,不需要,杜璞,已验收,
+"fix: 
+1. doc文件中有无效的deflate stream 导入时会panic
+2. vml2dml 转换错误导致排版不正确
+3. doc文件导入时候丢失表格边框
+4. 调整监控指标",office-word-rs,develop,2e264552,"gate
+pro",传统文档,传统文档导入,2025/12/11 21:00,蒋诗曲,沈合胜,已验收,蒋诗曲,已验收,
+file 内存优化：1. regex 提前编译 2. List grpc 移除循环创建 map,svc-file,release,58a80054 fix(memory): 修复循环创建 map 异常分配内存,pro,主站,文件相关接口,2025/12/10 23:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+错误日志: 增加日志定位obs请求403的问题,lizard-one,release-20251202,a4fad4e5 chore: 增加日志定位obs请求403的问题,"gate
+pro","轻文档
+专业表格",错误日志。需要验证是否能正常打开套件,2025/12/10 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+「内部改进」增加监控指标,office-ppt-rs,release,30abee16,"gate
+pro",幻灯片,无,2025/12/9 23:59,杜璞,,不需要,杜璞,已验收,
+"-修复传统文档粘贴 gif 控制台报错
+-添加默认字体族列表样式",lizard-service-docx-sdk,release-20251125,d67238b,"gate
+pro",传统文档,复制粘贴，传统文档预览,2025/12/9 21:00,万捷,骆寿祥,已验收,万捷,已验收,
+错误日志getFileContentUrl添加requestUrl,lizard-one,release-20251202,7fe84c7c fix(log): getFileContentUrl log添加requestUrl,"gate
+pro","轻文档
+专业表格",错误日志。需要验证是否能正常打开套件,2025/12/9 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+"fix: 桌面预览情况下不应该显示表单编辑页header右上角的一系列按钮
+fix: 订阅中的收集份数部分，修改之后默认都为100
+fix: 单行文本限制字符数，输入invalid的值时没有重置成上一次的正确值
+fix: 填写页上传文件后展示样式问题；
+fix: 填写页上传文件后计算的文件大小不对及精度问题
+chore: 一键提醒未提交过的制定填写人接口失败文案优化
+chore: 附件下载代码重构
+fix: 常用题编辑问题后选择其他常用题，保存修改的内容错乱
+fix: 富文本编辑器字体列表「系统中暂无此字体」tooltip遮挡问题
+fix: 填空题填写页和编辑页在有连续多个空格的情况下展示不一致的问题
+perf: 编辑页多级下拉选项编辑弹窗性能优化",lizard-service-form-sdk,release-2025-12-04,"22a23a0
+fix: 调整填空题在编辑页和填写页的样式，使其保持统一","gate
+pro",表单,表单编辑页、填写页，桌面的表单预览,2025/12/9 17:30,刘义杨,沈合胜,已验收,刘义杨,已验收,
+file 内存优化：1. regex 提前编译 2. List grpc 移除循环创建 map,svc-file,release,58a80054 fix(memory): 修复循环创建 map 异常分配内存,gate,主站,文件相关接口,2025/12/8 23:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+"优化日志
+被灰产刷的接口新增限流策略
+pdf 预览控制台报错修复","svc-provider
+sdk-api","release
+release-saas","svc-provider:1f3d8d59
+sdk-api:c6805a75",pro,后端,"所有场景的大预览
+pdf 预览控制台信息",2025/12/8 23:00,卢阳,叶慧玥,已验收,"卢阳
+熊智",已验收,
+错误日志-,lizard-one,release-20251202,8cfa40df chore: /lizard-api/files请求增加时间戳query string,"gate
+pro","轻文档
+专业表格",/lizard-api/files请求。需要验证是否能正常打开套件,2025/12/8 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+【紧急上线】匿名用户不允许通过 /sdk/v2/api/user/users/:uid/info 接口获取邮箱,sdk-api,release-saas-hotfix-uinfo-anonymous-email,b6d21b83,"gate
+pro",后端,/sdk/v2/api/user/users/:uid/info 返回内容,2025/12/8 11:00,卢阳,,不需要,卢阳,已验收,
+修复获取文件创建者信息异常,app-api,release,5e81b9db fix(user): 修复文件创建者信息获取异常,pro,主站,文件信息，文件详情,2025/12/5 23:00,王洋洋,叶慧玥,已验收,王洋洋,,
+清除redis单元格缓存数据,-,-,仅执行脚本，无版本更新,,应用表格,无影响,2025/12/5 23:00,唐彪,,不需要,唐彪,,
+公式计算 RS2 ,svc-sheet,develop/calc-engine-saas,,gate,专业表格,专业表格,2025/12/5 00:00,胡星宇,胡星宇,未验收,胡星宇,未验收,
+"优化日志
+被灰产刷的接口新增限流策略
+pdf 预览控制台报错修复","svc-provider
+sdk-api","release
+release-saas","svc-provider:4a6efa53
+sdk-api:c6805a75",gate,后端,"所有场景的大预览
+pdf 预览控制台信息",2025/12/4 23:00,卢阳,叶慧玥,已验收,"卢阳
+熊智",已验收,
+修复获取文件创建者信息异常,app-api,release,5e81b9db fix(user): 修复文件创建者信息获取异常,gate,主站,文件信息，文件详情,2025/12/4 23:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+应用表格去除redis缓存单元格数据逻辑,svc-table,fix/motable,715c1ad4：没开启缓存时不往redis中写入数据,"gate
+pro",应用表格,应用表格编辑和数据查看,2025/12/4 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+"fix: 桌面预览情况下不应该显示表单编辑页header右上角的一系列按钮
+fix: 订阅中的收集份数部分，修改之后默认都为100
+fix: 单行文本限制字符数，输入invalid的值时没有重置成上一次的正确值
+fix: 填写页上传文件后展示样式问题；
+fix: 填写页上传文件后计算的文件大小不对及精度问题
+chore: 一键提醒未提交过的制定填写人接口失败文案优化
+chore: 附件下载代码重构
+fix: 常用题编辑问题后选择其他常用题，保存修改的内容错乱
+fix: 富文本编辑器字体列表「系统中暂无此字体」tooltip遮挡问题
+fix: 填空题填写页和编辑页在有连续多个空格的情况下展示不一致的问题
+perf: 编辑页多级下拉选项编辑弹窗性能优化",lizard-service-form-sdk,release-2025-12-04,"22a23a0
+fix: 调整填空题在编辑页和填写页的样式，使其保持统一",pre,表单,表单编辑页、填写页，桌面的表单预览,2025/12/4 21:00,刘义杨,沈合胜,已验收,刘义杨,已验收,
+公式计算 RS2 ,svc-sheet,develop/calc-engine-saas,7211d20f feat(calc): 结果支持 CellStyle,gate,专业表格,专业表格,2025/12/3 23:00,胡星宇,胡星宇,已验收,胡星宇,已验收,
+错误日志,lizard-one,release-20251118,2c301d37 fix(fetch-content-log): 重新请求contentUrl时，打印日志,"gate
+pro",轻文档,错误日志,2025/12/3 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+新轻文档预览灰度：Gate -个人文件 -比例到62/62 ,无,无,修改配置,gate,轻文档,个人公开只读文件预览,2025/12/2 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+修复 PDF加水印会乱码,office-render-rs,master,71c23b7e,"gate
+pro","传统文档
+幻灯片",PDF加水印,2025/12/2 21:00,蒋诗曲,,,蒋诗曲,已验收,
+修复复制钉钉文本缺失段落问题,lizard-service-doc-sdk,develop,commit 5bf3ccf26a2d1ee934d03cc4122e1cb71c86d33d     fix: 修复粘贴钉钉文本的问题,"gate
+pro",轻文档,粘贴功能,2025/12/1 21:00,梁洺睿,骆寿祥,已验收,梁洺睿,已验收,
+"错误日志补充信息
+统一内容请求&异常处理流程",lizard-one,release-20251118,"43c6b05d fix(fetch-content-log): 添加获取obs内容时的用户电脑本地时间
+","gate
+pro
+pre","轻文档
+专业表格",错误日志、统一内容请求,2025/12/1 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,也要通知表格回归
+修复数据表菜单中管理引用表的显示逻辑,lizard-service-table-sdk,release-20251118,b8ffc8d: fix: 修复数据表菜单中管理引用表的显示逻辑,"gate
+pro
+pre",应用表格,sheet右键菜单管理引用表显示,2025/12/1 17:00,柯特,叶慧玥,已验收,柯特,已验收,
+office-file-convertor-preview服务下线，sdk-api中配置地址更改为office-toolbox-rs,sdk-api,无,修改配置,"gate
+pro",后端,rtf文件预览,2025/11/27 23:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+"- timeout报错信息修复
+- sheetname有特殊字符时导出异常",office-excel-rs,develop,96d5b74b,"gate
+pro",专业表格,专业表格导入导出,2025/11/27 22:00,陆俊杰,程杰,已验收,陆俊杰,已验收,
+"- 邀请加入协作的文案优化
+- 主站header的logo大小，icon颜色优化",lizard-one,release-20251118,在错误页面添加协作加入提示信息 848775a2cbde670980c38761b02a55f1dff3d135,"gate
+pro",主站,,2025/11/27 21:00,熊智,叶慧玥,已验收,熊智,已验收,
+"- 修复协作者单元格高亮显示异常的问题
+- 修复复制视图后删除视图引起的解析报错",lizard-service-table-sdk,release-20251118,"f8fa327: fix: 补充已经存在协作者的相关交互
+50d7207: fix(view): cast global user ID to number","gate
+pro",应用表格,协作者单元格高亮、视图复制以及删除操作,2025/11/27 21:00,柯特,叶慧玥,已验收,柯特,已验收,
+app-api 调用 svc-user grpc 次数优化,app-api,release,2bf34968 fix(grpc): 优化获取文件详情时调用 user grpc 次数，包含未登录打开公开文档,pro,主站,获取文档详情,2025/11/26 23:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+公式计算RS2 上线1126版本,svc-sheet ,develop/calc-engine-saas,b43b34fc,gate,专业表格,表格公式计算,2025/11/26 21:00,胡星宇,胡星宇,,胡星宇,已验收,
+rust PDF 转换服务更新,office-render-rs,master,d05eaa27,"gate
+pro","传统文档
+幻灯片",PDF 转换,2025/11/26 21:00,杜璞,杜璞,,杜璞,已验收,
+性能优化：优化表单填写页多级下拉题型在选项数量特别多的情况下搜索、选择卡死的问题,lizard-service-form-sdk,release-2025-11-13,4edec11f2c0a87337b1d771f9975c964e0e6cdd7  perf: 填写页多级下拉问题项性能优化,"gate
+pro
+pre",表单,表单填写页的多级下拉题型,2025/11/26 21:00,刘义杨,沈合胜,已验收,刘义杨,已验收,
+错误日志添加额外信息（obs的body）,lizard-one,release-20251104（pre release-20251118),"gate: c3471851
+pre: 2bcc2df3","gate
+pre",轻文档,错误日志,2025/11/26 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+app-api 调用 svc-user grpc 次数优化,app-api,release,2bf34968 fix(grpc): 优化获取文件详情时调用 user grpc 次数，包含未登录打开公开文档,gate,主站,获取文档详情,2025/11/25 23:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+修复应用表格修改关联引用列后，删除/修改关联公式列编辑报错,svc-table,fix/motable,9ff60ac0:修复关联引用列转换其他列后，删除或修改对应的关联公式列报错,"gate
+pro",应用表格,关联公式列的删除与修改,2025/11/25 22:00,唐彪,叶慧玥,已验收,唐彪,已验收,
+"1.增加 richdoc-doctor 文档数据监测
+2.编辑器内部错误兜底",cougar-mobile-web,release-20251014,661f085dd571aeecbeb8193cb81d4071ad446221：feat(hawk-core): 更新 hawk version 0.0.94-beta-20251014-0,"gate
+pro",轻文档,新轻文档只读 灰度文件,2025/11/25 21:00,柳梦杰,骆寿祥,已验收,柳梦杰,已验收,
+轻文档错误日志添加详细信息,lizard-one,release-20251104（pre: release-20251118),,"gate
+pre",轻文档,错误日志,2025/11/25 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+新轻文档移除 Pro 上的所有 ssr,无,无,修改配置,pro,轻文档,个人公开只读文件预览,2025/11/24 21:00,杜旻翔,骆寿祥,,陈在宏,,暂不发布
+"修复表格导入边框色丢失
+修复csv 导入乱码",office-excel-rs,develop,2da5151d,"gate
+pro",专业表格,导入颜色，csv 导入,2025/11/24 21:00,郑细弯,程杰,已验收,郑细弯,,
+获取文件内容，obs接口错误添加上报日志,lizard-one,release-1104(pre: 1118),1d7506e6,"gate
+pre",轻文档,错误日志,2025/11/24 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+公式计算rs2 1121版,svc-sheet,develop/calc-engine-saas,22ae8c79: feat(calc): 接入 CalcEngine,gate,专业表格,表格公式计算,2025/11/21 23:30,胡星宇,胡星宇,,胡星宇,,
+新轻文档部分文档加载失败,cougar-web ,release-20251014,"31a58c28
+fix(code-block): 文档报错","gate
+pre",轻文档,新轻文档,2025/11/21 22:30,陈在宏,骆寿祥,,陈在宏,,
+轻文档错误日志上报优化,"cougar-mobile-web release-20251014 645ad3ea
+lizard-one release-20251014 
+lizard-service-doc-sdk","release-20251014
+release-20251014
+develop","645ad3ea
+9e525596","gate
+pro",轻文档,错误上报日志,2025/11/20 21:00,"梁洺睿
+陈在宏",骆寿祥,,"梁洺睿
+陈在宏",,hotfix
+"- 修复传统文档导入图片属性 crop
+- 修复传统文档导入 符号",office-word-rs,develop,1c142cfb,"gate
+pro",传统文档,文档图片和Run中的符号,2025/11/19 21:30,蒋诗曲,蒋诗曲,已验收,蒋诗曲,已验收,
+- 修复轻文档标题带有<!!s >时导出pdf会有删除线,office-light-doc-rs,master,49841fae,"gate
+pro",轻文档,轻文档导出图片&pdf,2025/11/19 21:30,蒋诗曲,骆寿祥,,蒋诗曲,已验收,
+"• 优化表格单元格系统色背景
+• 优化表格导入过滤无效图片",office-excel-rs ,develop,0a2e62d9,"gate
+pro",专业表格,表格图片和背景色导入,2025/11/19 21:30,郑细弯,程杰,已验收,郑细弯,已验收,
+"调整 表格/幻灯片/轻文档/应用表格/专业文档 使用 toolbox-rs 服务, 发布 GATE/PRO 环境
+",office-word-rs/office-light-doc-rs/office-excel-rs /office-table-rs /office-ppt-rs ,release,仅配置改动,"gate
+pro","传统文档
+轻文档
+专业表格
+应用表格
+幻灯片","1. 幻灯片/专业文档 导出PDF
+2. 幻灯片/轻文档/专业文档 smartart 导入功能",2025/11/19 21:30,杜璞,"赵龙妍
+骆寿祥",,杜璞,,
+新轻文档预览：修复日志上报错误,cougar-web-mobile,release-20251014,"5f57959729905edf78f106987ae17732c96d6fb9
+feat(hawk): 更新 lock file","gate
+pro
+pre",轻文档,新轻文档预览，日志上报,2025/11/19 21:30,柳梦杰,骆寿祥,已验收,柳梦杰,已验收,hotfix
+新轻文档预览灰度：Gate -个人文件 -比例到45/62 ,无,无,修改配置,gate,轻文档,个人公开只读文件预览,2025/11/19 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+"修复表单部分接口（提交、修改回复、查看分享回复等）因之前调整返回字段的名称导致页面展示不匹配的问题
+优化提交表单时内容超长的提示文案
+修复测验表单设置答案时如果答案和限制条件有冲突时应给出提示并禁止发布的问题",lizard-service-form,release-2025-11-13,d335fe27cb940a60a904db4872336ca8894d975b  chore: upgrade @shimo/core-collaboration 2.0.1,"gate
+pro",表单,表单的填写提交，修改回复，测验表单,2025/11/18 21:00,刘义杨,沈合胜,已验收,刘义杨,已验收,
+轻文档- 修复粘贴文段格式转换bug,lizard-service-doc-sdk,develop,5c1ee89,"gate
+pro",轻文档,粘贴文本,2025/11/18 21:00,骆寿祥,骆寿祥,已验收,梁洺睿,已验收,
+"- 表格富文本单引号相关bugfix
+- 表格编辑单元格、粘贴、拖拽单元格自动扩展筛选范围
+- 从excel复制带边框线的内容到石墨，边框线丢失",lizard-service-sheet-sdk,release-20251104,3b25060bbfbf393b2d57365ac91d2d7d3723f528  fix: error track,"gate
+pro",专业表格,"所有与单元格编辑有关的功能；
+筛选、独立视图中的筛选、筛选仅自己可见
+边框线复制粘贴",2025/11/18 00:00,"刘义杨
+王珂珂",程杰,已验收,"刘义杨
+王珂珂",已验收,
+修复本地电脑时间比服务器快时accessToken接口重复请求过快的问题,lizard-one,release-20251104,"32c3ee9989acff25afdf67c2e9a940549549e0d8
+fix(common): 修复accessToken 无限重复请求的问题","gate
+pro","专业表格
+应用表格
+幻灯片",修复本地电脑时间比服务器快时accessToken接口重复请求过快的问题,2025/11/14 21:00,王珂珂,"赵龙妍
+程杰",已验收,王珂珂,,
+修复access token 429导致表格打不开的问题,lizard-one,release-20251104,"33c36ba2c25ac92602e399f7c04532b6fd495336
+fix(sheet): 修复access token接口429导致表格打不开的问题","gate
+pro",专业表格,修复access token 429导致表格打不开的问题,2025/11/14 14:00,王珂珂,程杰,已验收,王珂珂,已验收,
+修复离职交接文件选择弹窗样式问题,lizard-project-enterprise,release-20251104,2abbdc95e8dcf85e74e34a828c54ed92ec1a1e2d,"gate
+pro",企业管理后台,离职交接文件选择弹窗样式,2025/11/13 21:00,熊智,叶慧玥,已验收,熊智,,
+"- 表格富文本单引号相关bugfix
+- 表格编辑单元格、粘贴、拖拽单元格自动扩展筛选范围
+- 从excel复制带边框线的内容到石墨，边框线丢失",lizard-service-sheet-sdk,release-20251104,3b25060bbfbf393b2d57365ac91d2d7d3723f528  fix: error track,"gate
+pro",专业表格,"所有与单元格编辑有关的功能；
+筛选、独立视图中的筛选、筛选仅自己可见
+边框线复制粘贴",2025/11/13 21:00,"王珂珂
+刘义杨",程杰,已验收,"刘义杨
+王珂珂",已验收,代码已回滚
+"修复预览视图下ofd文件无法正常显示的问题
+修复表格复制图片粘贴到外部（如腾讯表格）时显示防盗链的问题",lizard-one,release-20251104,"7f07a270082b10a47c0a7d3840a09c9be069d2f8
+fix(sheet): 初始化表格传入assets","gate
+pro",主站,"ofd文件预览
+专业表格复制图片粘贴到外部",2025/11/13 21:00,熊智,"程杰
+叶慧玥",已验收,"刘义杨
+熊智",,表格研发验证通过
+"修复表单部分接口（提交、修改回复、查看分享回复等）因之前调整返回字段的名称导致页面展示不匹配的问题
+优化提交表单时内容超长的提示文案
+修复测验表单设置答案时如果答案和限制条件有冲突时应给出提示并禁止发布的问题",lizard-service-form,release-2025-11-13,d335fe27cb940a60a904db4872336ca8894d975b  chore: upgrade @shimo/core-collaboration 2.0.1,pre,表单,表单的填写提交，修改回复，测验表单,2025/11/13 11:00,刘义杨,沈合胜,已验收,刘义杨,已验收,
+auth 调整 pat 鉴权范围匹配路径,svc-auth,fix-pat,ffdf68ff fix(scope): correct pat scope,pro,主站,pat 客户鉴权调用团队空间列表,2025/11/12 23:00,王洋洋,叶慧玥,已验收,王洋洋,,
+新增 rs2 黑名单配置，黑名单内的客户不走 rs2 计算,"svc-sheet
+svc-sheet-worker",release-saas,371999ba fix(worker): 修复任务处理异常时崩溃问题,"gate
+pro",后端,跨表引用、表格导出,2025/11/12 21:00,段律,,不需要,段律,,
+修复应用表格编辑埋点缺失问题,svc-table,fix/motable,f57de96a：编辑埋点,"gate
+pro",应用表格,应用表格编辑埋点,2025/11/11 22:00,唐彪,,不需要,唐彪,,
+轻文档更新错误堆栈日志,lizard-service-doc-sdk,develop,dbc9ec9: fix: revert 多个commit,"gate
+pro
+pre",轻文档,报错日志,2025/11/11 21:00,梁洺睿,骆寿祥,已验收,梁洺睿,已验收,
+"- 表格富文本单引号相关bugfix
+- 表格编辑单元格、粘贴、拖拽单元格自动扩展筛选范围",lizard-service-sheet-sdk,release-20251104,e9c82beeee3d7ce0ed00725de222a8646679658e  fix: 修复upload token接口401,gate,专业表格,"所有与单元格编辑有关的功能；
+筛选、独立视图中的筛选、筛选仅自己可见",2025/11/11 21:00,刘义杨,程杰,已验收,刘义杨,已验收,
+auth 调整 pat 鉴权范围匹配路径,svc-auth,hotfix/cd115687/doc-v2,26fe01a5 fix(scope): correct pat scope,gate,主站,pat 客户鉴权调用团队空间列表,2025/11/10 21:00,王洋洋,叶慧玥,已验收,王洋洋,已验收,
+升级 @shimo/form-utils ,lib-compose,release,1f72185 chore: upgrade @shimo/form-utils,pro,表单,表单提交的回复同步至表格；表单修改回复提交同步至表格,2025/11/10 21:00,段律,程杰,已验收,"刘义杨
+段律",已验收,
+修复从google sheet复制IMAGE公式的图片到石墨表格粘贴后图片丢失的问题,lizard-service-sheet-sdk ,release-20251028 ,81f344bf451fc0c4e7a5fc9d4b074c103bbd9070 fix: 修复upload token接口401,"gate
+pro",专业表格,图片上传,2025/11/7 21:00,王珂珂,程杰,已验收,王珂珂,已验收,
+应用表格扫描所有todo的redis中的数据,svc-table,feat/todo-redis-optimization-pre,最新提交,pre,应用表格,增加脚本，无影响,2025/11/7 18:30,唐彪,叶慧玥,不需要,唐彪,已验收,
+应用表格导出丢失说明页修复,svc-table,fix/motable,最新commit,"gate
+pro",应用表格,应用表格导出,2025/11/6 21:30,唐彪,叶慧玥,已验收,唐彪,已验收,
+"- 应用表格导入bugfix
+- 应用表格导出说明页丢失bugfix",office-table-rs,v-0.1.x,最新commit,"gate
+pro",应用表格,应用表格导入导出,2025/11/6 21:30,陆俊杰,叶慧玥,已验收,陆俊杰,已验收,svc-table发布完后再发
+"- 表格禁止复制、剪切或粘贴至包含问题项的列
+- 饼图环图漏斗图label/tooltip百分比精确到两位
+- 侧边栏历史针对取消关联表单工作表添加一条特殊历史记录
+- 筛选增加快捷键
+- 图表依赖升级（echarts v6）",lizard-service-sheet-sdk ,release-20251028 ,"b2f662ac92f2aca3adfffa8fb907ef4af0a86c65
+fix: 公开分享只读需要隐藏工具栏",pro,专业表格,分享只读工具栏隐藏、图片复制粘贴,2025/11/6 21:00,"王珂珂
+刘义杨",程杰,已验收,"王珂珂
+刘义杨",已验收,
+"- 表格富文本单引号相关bugfix
+- 表格编辑单元格、粘贴、拖拽单元格自动扩展筛选范围",lizard-service-sheet-sdk,release-20251104,"89c0b13d3873c82586a583ed3fb07b5f94783b47
+fix: 公开分享只读需要隐藏工具栏",pre,专业表格,"所有与单元格编辑有关的功能；
+筛选、独立视图中的筛选、筛选仅自己可见",2025/11/6 14:30,刘义杨,程杰,已验收,刘义杨,已验收,
+新轻文档预览灰度比例放大,无,只改配置,,gate,轻文档,个人公开只读文档预览,2025/11/5 21:00,杜旻翔,骆寿祥,已验收,陈在宏,已验收,
+"移除套件页面的非必要alpha_features接口
+修复主站附件上传组件不识别mime的所有类型问题（无法上传jpg",lizard-one,pro：release-20251014       pre：release20251104,,"gate
+pro
+pre",主站,"套件页面删除不必要接口
+附件上传支持上传jpg",2025/11/5 21:00,熊智,"沈合胜
+叶慧玥",已验收,熊智,已验收,
+"• 添加更多上报日志去解析相关报错
+• 修复删除视图后撤销操作的情况下数据不渲染的问题
+• 修复管理引用表过程中点击删除按钮重复请求的问题
+• 修复关联引用场景行卡点限制没有生效的问题
+• 更新字段名称，新增字段对于名称的校验",lizard-service-table-sdk,release-20251028,最新提交,"gate
+pro",应用表格,初始化流程报警、视图撤销重写操作、引用表管理、关联引用,2025/11/5 21:00,柯特,叶慧玥,已验收,柯特,已验收,报警日志上传不需要回归，观察一下页面状态就行；回归bug fix
+"修复分享只读模式下未隐藏工具栏的问题；
+修复老版本复制到新版本图片丢失；",lizard-service-sheet-sdk ,release-2025-09-25 最新commit,,pro,专业表格,分享只读工具栏隐藏、图片复制粘贴,2025/11/4 21:00,"刘义杨
+王珂珂",程杰,已验收,"王珂珂
+刘义杨",已验收,
+"- 表格禁止复制、剪切或粘贴至包含问题项的列
+- 饼图环图漏斗图label/tooltip百分比精确到两位
+- 侧边栏历史针对取消关联表单工作表添加一条特殊历史记录
+- 筛选增加快捷键
+- 图表依赖升级（echarts v6）",lizard-service-sheet-sdk ,release-20251028 最新commit,,gate,专业表格,图表，筛选，表单问题项对应列的剪切粘贴,2025/11/4 00:00,"刘义杨
+王珂珂",程杰,已验收,"王珂珂
+刘义杨",已验收,
+主站-双十一活动上线,"lizard-one：pro、pre、gate1014
+lizard-service-homepage：gate、pro 1021，pre 1028",,,"gate
+pro
+pre",主站,官网、主站内双十一活动标识,2025/10/30 21:00,熊智,骆寿祥,已验收,熊智,已验收,
+专业表格入口统一,"lizard-service-sheet-sdk release-2025-09-25最新commit
+sdk-iframe-assets release-20250923
+lizard-one release-20251014",,,pro,专业表格,专业表格整体功能,2025/10/30 21:00,王珂珂,程杰,已验收,王珂珂,已验收,pc/mobile/文件预览都需要回归
+传统文档入口统一,"izard-service-docx-sdk release-20251007
+sdk-iframe-assets  release-20250923",,,pro,传统文档,传统文档整体功能,2025/10/30 21:00,万捷,骆寿祥,已验收,万捷,已验收,pc/mobile/文件预览都需要回归
+新轻文档预览重构,"lizard-one release-20251014
+cougar-mobile-web release-20251014",,,pro,轻文档,个人公开分享只读文档,2025/10/30 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,
+"- 表格禁止复制、剪切或粘贴至包含问题项的列
+- 饼图环图漏斗图label/tooltip百分比精确到两位
+- 侧边栏历史针对取消关联表单工作表添加一条特殊历史记录
+- 筛选增加快捷键
+- 图表依赖升级（echarts v6）",lizard-service-sheet-sdk release-20251028 最新commit,,,pre,专业表格,图表，筛选，表单问题项对应列的剪切粘贴,2025/10/29 09:30,"王珂珂
+刘义杨",程杰,已验收,"王珂珂
+刘义杨",已验收,
+"• 修复Safari16.1及以下版本上传图片附件不可见的问题
+• 修复历史中列表视图默认弹出侧边栏的问题
+• 修复报警群解析视图motable的错误问题",lizard-service-table-sdk release-20251014 最新提交,,,"gate
+pro",应用表格,应用表格图片附件预览,2025/10/28 21:00,柯特,叶慧玥,已验收,柯特,已验收,应用表格冒烟、bugfix回归
+"• 补充「获得有渠道来源的数据结果」付费卡点
+• 修改日期题型限制日期范围的结束时间为23:59:59
+• 修复重命名常用题时列表和详情显示不一致的问题",lizard-service-form-sdk release-20251014 最新commit,,,"gate
+pro",表单,「获得有渠道来源的数据结果」付费卡点、日期提醒填写、常用题列表,2025/10/28 21:00,刘义杨,叶慧玥,已验收,刘义杨,已验收,表单冒烟、需求及bugfix回归
+• 更新 sdk-api，修复空指针问题,sdk-api,,,pro,大预览,云盘文件大预览，附件预览,2025/10/28 21:00,卢阳,叶慧玥,已验收,卢阳,已验收,大预览冒烟
+• 更新 sdk-api 配置，修复 pdf 预览右键菜单,sdk-api,,,"gate
+pro",大预览,云盘文件大预览，附件预览,2025/10/28 21:00,卢阳,叶慧玥,已验收,卢阳,已验收,大预览冒烟
+修复国际化翻译没有应用上的问题,lizard-service-table-sdk release-20251014 最新提交,,,"gate
+pro
+pre",应用表格,国际化,2025/10/28 21:00,柯特,叶慧玥,已验收,柯特,已验收,hotfix
+幻灯片 - 修复移动端评论列表用户头像显示,lizard-one: pre以及gate发布release-20251014 最新提交。 pro 发布release-20250909 最新提交。,,,"gate
+pro
+pre",幻灯片,移动端评论头像显示,2025/10/28 21:00,张萌,赵龙妍,已验收,张萌,已验收,hotfix
+幻灯片 - 打印权限与下载权限解绑,lizard-service-presentation-sdk： release-20250909 最新提交,,,"gate
+pro
+pre",幻灯片,打印权限,2025/10/28 21:00,张萌,赵龙妍,已验收,张萌,已验收,hotfix
+幻灯片 - 只读、只评模式下开启远程演示,lizard-service-presentation-sdk： release-20250909 最新提交,,,"gate
+pro
+pre",幻灯片,开启远程演示,2025/10/28 21:00,张萌,赵龙妍,已验收,张萌,已验收,hotfix
+幻灯片 -  修复打开超链接显示404的问题,lizard-service-presentation-sdk： release-20250909 最新提交,,,"gate
+pro",幻灯片,打开超链接,2025/10/28 21:00,张萌,赵龙妍,已验收,张萌,已验收,hotfix
+修复跨表格公式范围为小写/整行整列时解析失败的问题,lizard-service-sheet-sdk release-2025-09-25最新commit,,,gate,专业表格,跨表格引用范围解析,2025/10/28 21:00,王珂珂,程杰,已验收,王珂珂,已验收,hotfix
+修复复制公式结果为图片的单元格选择性粘贴为值之后图片丢失 & 调整请求表格内容失败的日志,lizard-service-sheet-sdk release-2025-09-25最新commit,,,gate,专业表格,表格选择性粘贴,2025/10/27 21:00,王珂珂,程杰,已验收,王珂珂,已验收,回归选择性粘贴为值功能
+修复部分图片导入失败,office-excel-rs f6595df6,,,"gate
+pro",专业表格,表格图片导入,2025/10/27 14:30,郑细弯,程杰,已验收,郑细弯,已验收,
+新轻文档预览重构,"lizard-one release-20251014
+cougar-mobile-web release-20251014",,,gate,轻文档,个人公开分享只读文档,2025/10/23 21:00,陈在宏,骆寿祥,已验收,陈在宏,已验收,隐式影响范围的效果。https://shimo.im/docs/Ee32mMNganIx8eA2/ 《新轻文档隐式影响范围》，可复制链接后用石墨文档 App 打开 《新轻文档隐式影响范围》，可复制链接后用石墨文档 App 打开
+传统文档入口统一,"izard-service-docx-sdk release-20251007
+sdk-iframe-assets  release-20250923",,,gate,传统文档,传统文档整体功能,2025/10/23 21:00,万捷,骆寿祥,已验收,万捷,已验收,pc/mobile/文件预览都需要回归
+专业表格入口统一,"lizard-service-sheet-sdk release-2025-09-25最新commit
+sdk-iframe-assets release-20250923",,,gate,专业表格,专业表格整体功能,2025/10/23 21:00,王珂珂,程杰,已验收,王珂珂,已验收,pc/mobile/文件预览都需要回归
+"• 修复表格内链接导入丢失 
+• 修复轻文档部分文档导入失败","office-excel-rs 66097145
+office-light-rs e65cfd5c",,,"gate
+pro","轻文档
+专业表格",表格导入导出、轻文档导入,2025/10/22 00:00,郑细弯,程杰,已验收,郑细弯,已验收,
