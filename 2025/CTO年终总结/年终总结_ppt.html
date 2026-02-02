@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年度研发中心工作汇报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 60px;
+        }
+
+        .slide {
+            width: 1200px;
+            min-height: 675px;
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 14px;
+            color: #adb5bd;
+        }
+
+        /* Cover Slide */
+        .slide-cover {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .slide-cover h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .slide-cover .subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .slide-cover .highlights {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .slide-cover .highlight-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .slide-cover .highlight-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .slide-cover .highlight-item p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* Standard Headers */
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1a1a2e;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        /* Content Layouts */
+        .content {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        /* Color Variants */
+        .card-red { border-left: 5px solid #e74c3c; }
+        .card-red .card-title { color: #e74c3c; }
+        .card-red .card-icon { background: #fdeaea; }
+
+        .card-green { border-left: 5px solid #27ae60; }
+        .card-green .card-title { color: #27ae60; }
+        .card-green .card-icon { background: #e8f8f0; }
+
+        .card-blue { border-left: 5px solid #3498db; }
+        .card-blue .card-title { color: #3498db; }
+        .card-blue .card-icon { background: #e8f4fc; }
+
+        .card-purple { border-left: 5px solid #9b59b6; }
+        .card-purple .card-title { color: #9b59b6; }
+        .card-purple .card-icon { background: #f5eafa; }
+
+        .card-orange { border-left: 5px solid #e67e22; }
+        .card-orange .card-title { color: #e67e22; }
+        .card-orange .card-icon { background: #fdf2e6; }
+
+        /* Lists */
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            padding: 10px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #495057;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .list li:last-child {
+            border-bottom: none;
+        }
+
+        .list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6c757d;
+            font-weight: bold;
+        }
+
+        .list-check li::before {
+            content: "✓";
+            color: #27ae60;
+        }
+
+        .list-cross li::before {
+            content: "×";
+            color: #e74c3c;
+        }
+
+        /* Numbered Items */
+        .numbered-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .numbered-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .num-badge {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .num-content h4 {
+            font-size: 15px;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .num-content p {
+            font-size: 13px;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-card .value {
+            font-size: 42px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .label {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .stat-card .sublabel {
+            font-size: 12px;
+            color: #adb5bd;
+            margin-top: 4px;
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .data-table th {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .data-table td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+            color: #495057;
+        }
+
+        .data-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .quote-box p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Result Cards */
+        .result-cards {
+            display: flex;
+            gap: 20px;
+        }
+
+        .result-card {
+            flex: 1;
+            background: linear-gradient(145deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            padding: 18px 20px;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+        }
+
+        .result-card h4 {
+            font-size: 15px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-card p {
+            font-size: 13px;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #dee2e6;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-item h4 {
+            font-size: 15px;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item p {
+            font-size: 13px;
+            color: #6c757d;
+        }
+
+        /* Architecture Table */
+        .arch-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+
+        .arch-table tr {
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .arch-table td {
+            padding: 16px 20px;
+        }
+
+        .arch-table td:first-child {
+            border-radius: 10px 0 0 10px;
+            font-weight: 700;
+            color: #667eea;
+            width: 120px;
+        }
+
+        .arch-table td:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Final Slide */
+        .slide-final {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .slide-final h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .slide-final .vision {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 50px;
+        }
+
+        .slide-final .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .slide-final .summary-item {
+            background: rgba(255,255,255,0.1);
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .slide-final .summary-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .slide-final .summary-item p {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* Comparison Section */
+        .comparison {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .comparison-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #667eea;
+            padding: 0 10px;
+        }
+
+        .comparison-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .comparison-box.past {
+            background: #fef5f5;
+            border: 2px solid #f8d7da;
+        }
+
+        .comparison-box.now {
+            background: #f0fdf4;
+            border: 2px solid #d1fae5;
+        }
+
+        .comparison-box h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .comparison-box.past h4 {
+            color: #dc3545;
+        }
+
+        .comparison-box.now h4 {
+            color: #10b981;
+        }
+
+        /* Mini Chart */
+        .mini-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 100px;
+            padding: 10px 0;
+        }
+
+        .chart-bar {
+            flex: 1;
+            background: linear-gradient(to top, #667eea, #764ba2);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-width: 30px;
+        }
+
+        .chart-bar span {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        /* Navigation */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-dot:hover {
+            background: rgba(255,255,255,0.6);
+        }
+
+        /* Flex utilities */
+        .flex-1 { flex: 1; }
+        .mt-20 { margin-top: 20px; }
+        .mb-20 { margin-bottom: 20px; }
+        .text-center { text-align: center; }
+
+        /* Bug trend mini bars */
+        .trend-bars {
+            display: flex;
+            gap: 4px;
+            align-items: flex-end;
+            height: 60px;
+        }
+
+        .trend-bar {
+            width: 20px;
+            background: linear-gradient(to top, #27ae60, #2ecc71);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .trend-bar.high {
+            background: linear-gradient(to top, #e74c3c, #c0392b);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+
+        <!-- Slide 1: Cover -->
+        <div class="slide slide-cover">
+            <h1>2025年度研发中心工作汇报</h1>
+            <p class="subtitle">以客户为中心，迈向新征程</p>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <h3>Drive 战略落地</h3>
+                    <p>从零组建团队<br/>半年交付三大标杆客户</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>内部体验机制</h3>
+                    <p>构建 shimo.net<br/>回归客户视角</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>自动化部署</h3>
+                    <p>POC 无需立项<br/>非 SRE 亦可操作</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>AI 提效</h3>
+                    <p>一个月完成类飞书产品<br/>全面赋能研发流程</p>
+                </div>
+            </div>
+            <div class="slide-number">1</div>
+        </div>
+
+        <!-- Slide 2: Drive Strategic Significance -->
+        <div class="slide">
+            <div class="header">
+                <h1>Drive 的战略意义</h1>
+                <p class="subtitle">愿景：文档届的 GitLab</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="comparison">
+                        <div class="comparison-box past">
+                            <h4>过去 (2024)</h4>
+                            <ul class="list list-cross">
+                                <li>全站版本部署和运维复杂</li>
+                                <li>成本高、利润低</li>
+                                <li>定制化：小功能定制化</li>
+                                <li>广东电信发布需比照代码<br/>耗时3天，SRE手动操作</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-box now">
+                            <h4>现在 (2025)</h4>
+                            <ul class="list list-check">
+                                <li>Drive 简化部署</li>
+                                <li>成本低、利润可观</li>
+                                <li>定制化：大功能定制化</li>
+                                <li>直接拿包<br/>SRE、研发均可操作</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-cards mt-20">
+                <div class="result-card">
+                    <h4>🏢 广东电信</h4>
+                    <p>数据迁移：6-8小时 → 30分钟</p>
+                </div>
+                <div class="result-card">
+                    <h4>📚 好未来</h4>
+                    <p>灰度迁移方案落地</p>
+                </div>
+                <div class="result-card">
+                    <h4>📱 OPPO</h4>
+                    <p>双环境迁移方案</p>
+                </div>
+                <div class="result-card">
+                    <h4>🛠️ 大功能定制化</h4>
+                    <p>所有者功能、密级标签系统、群组功能、折叠屏适配</p>
+                </div>
+            </div>
+            <div class="slide-number">2</div>
+        </div>
+
+        <!-- Slide 3: Delivery -->
+        <div class="slide">
+            <div class="header">
+                <h1>私有化交付</h1>
+                <p class="subtitle">在 TOP10 客户上投入大量工时，确保交付质量</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">17</div>
+                    <div class="label">大版本升级</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">13</div>
+                    <div class="label">正式交付</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">15</div>
+                    <div class="label">POC</div>
+                </div>
+            </div>
+            <div class="content mt-20">
+                <div class="column">
+                    <div class="card card-blue">
+                        <div class="card-title">
+                            <span class="card-icon">🚀</span>
+                            自动化发布和升级
+                        </div>
+                        <ul class="list list-check">
+                            <li>确保 Drive 交付升级顺畅</li>
+                            <li>日志系统：客户侧问题尽快发现</li>
+                            <li>工具可视化：极大降低运维成本</li>
+                            <li>POC 部署变得轻量化、去专业化</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-purple">
+                        <div class="card-title">
+                            <span class="card-icon">⚡</span>
+                            技术突破
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">1</span>
+                            <div class="num-content">
+                                <h4>应用表格</h4>
+                                <p>百万单元格：无法打开 → 4.5s | 高级权限系统上线 | 协作模块统一</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">2</span>
+                            <div class="num-content">
+                                <h4>极速 SDK</h4>
+                                <p>前端入口统一，性能大幅提升</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">3</div>
+        </div>
+
+        <!-- Slide 4: Stability -->
+        <div class="slide">
+            <div class="header">
+                <h1>稳定性</h1>
+                <p class="subtitle">Bug 数逐月下降趋势</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-title">📊 月度缺陷数据</div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>月份</th>
+                                    <th>SaaS</th>
+                                    <th>私有化</th>
+                                    <th>趋势</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1月</td><td>162</td><td>33</td><td style="color:#e74c3c">▼</td></tr>
+                                <tr><td>2月</td><td>73</td><td>95</td><td></td></tr>
+                                <tr><td>3月</td><td>101</td><td>84</td><td></td></tr>
+                                <tr><td>6月</td><td>65</td><td>73</td><td></td></tr>
+                                <tr><td>9月</td><td>41</td><td>22</td><td style="color:#27ae60">▼</td></tr>
+                                <tr><td>12月</td><td>59</td><td>50</td><td style="color:#27ae60">▼</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-green mb-20" style="flex: none;">
+                        <div class="card-title">
+                            <span class="card-icon">✓</span>
+                            关键指标
+                        </div>
+                        <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                            <div class="stat-card">
+                                <div class="value" style="font-size: 28px;">99.99%</div>
+                                <div class="label">SaaS 接口稳定性</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="value" style="font-size: 28px;">99.9%</div>
+                                <div class="label">导入导出稳定性</div>
+                                <div class="sublabel">99.1% → 99.9%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-orange" style="flex: none;">
+                        <div class="card-title">
+                            <span class="card-icon">⚠</span>
+                            SaaS 缺陷类型 Top3
+                        </div>
+                        <ul class="list">
+                            <li>代码问题：384（69.3%）</li>
+                            <li>非问题：62</li>
+                            <li>需求上线引入：41</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">4</div>
+        </div>
+
+        <!-- Slide 5: Stability Measures -->
+        <div class="slide">
+            <div class="header">
+                <h1>稳定性保障措施</h1>
+                <p class="subtitle">从被客户问题拖累，到主动防御</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="card card-blue">
+                        <div class="card-title">
+                            <span class="card-icon">🛡️</span>
+                            SaaS 保障
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">1</span>
+                            <div class="num-content">
+                                <h4>值班制度</h4>
+                                <p>7x24 小时响应机制</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">2</span>
+                            <div class="num-content">
+                                <h4>报警配置</h4>
+                                <p>150 条报警规则 | 重构后业务 > 0 即报警 | 老业务迁入 > 10</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">3</span>
+                            <div class="num-content">
+                                <h4>导入导出优化</h4>
+                                <p>大量 SOP 支撑 | 工单减少 | 人员可更多做需求</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-purple">
+                        <div class="card-title">
+                            <span class="card-icon">🎯</span>
+                            长期质量策略
+                        </div>
+                        <div class="comparison" style="flex-direction: column; gap: 15px;">
+                            <div class="comparison-box past" style="padding: 15px;">
+                                <h4 style="font-size: 14px; margin-bottom: 8px;">短期：交付团队 + SOP</h4>
+                                <p style="font-size: 13px; color: #6c757d;">快速响应客户问题</p>
+                            </div>
+                            <div class="comparison-box now" style="padding: 15px;">
+                                <h4 style="font-size: 14px; margin-bottom: 8px;">长期：质量稳定</h4>
+                                <ul class="list list-check" style="font-size: 13px;">
+                                    <li>单元测试（AI 辅助）</li>
+                                    <li>自动化测试（AI 辅助）</li>
+                                    <li>运行错误：SaaS Error 日志 > 0 即报警</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p>目标：客户不想报 Bug，而是我们主动发现并解决问题</p>
+            </div>
+            <div class="slide-number">5</div>
+        </div>
+
+        <!-- Slide 6: Dogfooding -->
+        <div class="slide">
+            <div class="header">
+                <h1>内部体验机制（Dogfooding）</h1>
+                <p class="subtitle">从"被动修补"到"主动优化"的思维转变</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="card card-red">
+                        <div class="card-title">
+                            <span class="card-icon">⚠</span>
+                            核心痛点：脱离客户视角
+                        </div>
+                        <ul class="list list-cross">
+                            <li>shimo.im 与 SDK 产品架构不统一，未真正体验私有化产品</li>
+                            <li>研发团队缺乏对私有化全站和 SDK 产品的真实使用体验</li>
+                            <li>对客户反馈的痛点重视不足，响应滞后</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-green">
+                        <div class="card-title">
+                            <span class="card-icon">✓</span>
+                            变革举措
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">1</span>
+                            <div class="num-content">
+                                <h4>引入 Drive 团队</h4>
+                                <p>作为 SDK 首个"内部客户"，在开发阶段即暴露集成与体验问题</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">2</span>
+                            <div class="num-content">
+                                <h4>构建 shimo.net</h4>
+                                <p>全员使用 Drive + SDK 产品，将私有化升级作为内部日常办公环境</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">3</span>
+                            <div class="num-content">
+                                <h4>真实环境暴露</h4>
+                                <p>通过私有化升级方式处理 shimo.net，把问题暴露到内部使用环境</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-cards mt-20">
+                <div class="result-card">
+                    <h4>💡 关键发现</h4>
+                    <p>客户提的问题都是对的<br/>例：协作头像 API 复杂、搜索对接 API 复杂</p>
+                </div>
+                <div class="result-card">
+                    <h4>🎯 架构对齐</h4>
+                    <p>与客户环境一致才能解决问题<br/>更早发现问题，在交付前拦截缺陷</p>
+                </div>
+                <div class="result-card">
+                    <h4>🚀 主动优化</h4>
+                    <p>有些问题不应属于定制化<br/>研发主动处理，提前优化体验</p>
+                </div>
+            </div>
+            <div class="quote-box">
+                <p>客户提的问题都是对的 —— 只有自己用了才知道</p>
+            </div>
+            <div class="slide-number">6</div>
+        </div>
+
+        <!-- Slide 7: AI Enhancement -->
+        <div class="slide">
+            <div class="header">
+                <h1>AI 提效</h1>
+                <p class="subtitle">使用 AI 不是简单与 AI 对话 —— Skill、MCP、Agent</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="card card-purple">
+                        <div class="card-title">
+                            <span class="card-icon">🤖</span>
+                            AI 应用场景
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">1</span>
+                            <div class="num-content">
+                                <h4>海外类飞书项目</h4>
+                                <p>1 个月完成 | 古法编程不可取，先用 AI 试试</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">2</span>
+                            <div class="num-content">
+                                <h4>前后端联调</h4>
+                                <p>AI 自己登录、探测浏览器报错、检测数据库数据准确性</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">3</span>
+                            <div class="num-content">
+                                <h4>项目预估</h4>
+                                <p>给 CSV，AI 直接预估大项目、定制化项目工时</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge">4</span>
+                            <div class="num-content">
+                                <h4>测试用例</h4>
+                                <p>直接用 AI 转成 Playwright 自动化测试</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-blue">
+                        <div class="card-title">
+                            <span class="card-icon">📄</span>
+                            Word 预览突破
+                        </div>
+                        <div class="comparison" style="flex-direction: column; gap: 15px;">
+                            <div class="comparison-box now" style="padding: 20px;">
+                                <h4 style="font-size: 14px; margin-bottom: 10px;">Opus + MCP</h4>
+                                <ul class="list list-check" style="font-size: 13px;">
+                                    <li>直接理解 Word OOXML</li>
+                                    <li>快速提升新版 Word 预览</li>
+                                    <li>比老石墨增加更多排版能力</li>
+                                    <li>准确性大幅提升</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-box" style="margin-top: 20px; background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                        <p style="font-size: 16px;">古法编程不可取<br/>无论如何先要用 AI 试试</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">7</div>
+        </div>
+
+        <!-- Slide 8: Architecture -->
+        <div class="slide">
+            <div class="header">
+                <h1>研发架构</h1>
+                <p class="subtitle">Drive + SDK + SDK Core 三层架构</p>
+            </div>
+            <div class="content" style="flex-direction: column;">
+                <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px 50px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700;">Drive</div>
+                            <div style="font-size: 12px; opacity: 0.85; margin-top: 5px;">最外层</div>
+                        </div>
+                        <div style="font-size: 24px; color: #667eea;">→</div>
+                        <div style="background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 30px 50px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700;">SDK</div>
+                            <div style="font-size: 12px; opacity: 0.85; margin-top: 5px;">胶水层</div>
+                        </div>
+                        <div style="font-size: 24px; color: #667eea;">→</div>
+                        <div style="background: linear-gradient(135deg, #27ae60, #229954); color: white; padding: 30px 50px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700;">SDK Core</div>
+                            <div style="font-size: 12px; opacity: 0.85; margin-top: 5px;">纯套件</div>
+                        </div>
+                    </div>
+                </div>
+                <table class="arch-table">
+                    <tr>
+                        <td>Drive</td>
+                        <td><strong>职责：</strong>最外层，负责产品体验和商业化</td>
+                        <td><strong>优势：</strong>聚焦核心场景和卖点</td>
+                    </tr>
+                    <tr>
+                        <td>SDK</td>
+                        <td><strong>职责：</strong>胶水层，统一前后端逻辑</td>
+                        <td><strong>优势：</strong>统一私有化对接团队</td>
+                    </tr>
+                    <tr>
+                        <td>SDK Core</td>
+                        <td><strong>职责：</strong>纯套件，专注 UI 库和 JS API</td>
+                        <td><strong>优势：</strong>打造高可用 JS SDK API</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="slide-number">8</div>
+        </div>
+
+        <!-- Slide 9: Challenges -->
+        <div class="slide">
+            <div class="header">
+                <h1>问题与挑战</h1>
+                <p class="subtitle">需要反思的问题 & 持续面临的挑战</p>
+            </div>
+            <div class="content">
+                <div class="column">
+                    <div class="card card-red">
+                        <div class="card-title">
+                            <span class="card-icon">🔍</span>
+                            需要反思的问题
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e74c3c;">1</span>
+                            <div class="num-content">
+                                <h4>客户反馈重视不够</h4>
+                                <p>Dogfooding 后验证：客户是对的</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e74c3c;">2</span>
+                            <div class="num-content">
+                                <h4>代码问题占比高</h4>
+                                <p>Bug 的 69.3% 为代码问题</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e74c3c;">3</span>
+                            <div class="num-content">
+                                <h4>人员单点风险</h4>
+                                <p>每个研发仅负责一个套件</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card card-orange">
+                        <div class="card-title">
+                            <span class="card-icon">⚠</span>
+                            持续面临的挑战
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e67e22;">1</span>
+                            <div class="num-content">
+                                <h4>专业文档功能不齐</h4>
+                                <p>功能覆盖度仍需提升</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e67e22;">2</span>
+                            <div class="num-content">
+                                <h4>幻灯片 H5 编辑缺失</h4>
+                                <p>移动端不支持编辑</p>
+                            </div>
+                        </div>
+                        <div class="numbered-item">
+                            <span class="num-badge" style="background: #e67e22;">3</span>
+                            <div class="num-content">
+                                <h4>交付持续消耗</h4>
+                                <p>占总工时 20%+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">9</div>
+        </div>
+
+        <!-- Slide 10: Final -->
+        <div class="slide slide-final">
+            <h1>以客户为中心，迈向新征程</h1>
+            <p class="vision">2026：向着"文档界的 GitLab"坚定迈进</p>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>🚀 Drive 战略落地</h3>
+                    <p>验证架构演进</p>
+                </div>
+                <div class="summary-item">
+                    <h3>👥 体验机制建立</h3>
+                    <p>回归客户视角</p>
+                </div>
+                <div class="summary-item">
+                    <h3>⚙️ 自动化部署</h3>
+                    <p>赋能商业推广</p>
+                </div>
+                <div class="summary-item">
+                    <h3>📦 产品增强</h3>
+                    <p>补齐套件功能短板<br/>SDK/JS API 全面增强</p>
+                </div>
+            </div>
+            <div style="margin-top: 50px; display: flex; gap: 40px; justify-content: center;">
+                <div style="text-align: center;">
+                    <div style="font-size: 36px; font-weight: 700; color: #667eea;">99.99%</div>
+                    <div style="font-size: 14px; opacity: 0.7;">SaaS 接口稳定性</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 36px; font-weight: 700; color: #27ae60;">99.9%</div>
+                    <div style="font-size: 14px; opacity: 0.7;">导入导出稳定性</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 36px; font-weight: 700; color: #e67e22;">Bug ↓</div>
+                    <div style="font-size: 14px; opacity: 0.7;">逐月下降趋势</div>
+                </div>
+            </div>
+            <div class="slide-number" style="color: rgba(255,255,255,0.5);">10</div>
+        </div>
+
+    </div>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                document.querySelectorAll('.slide')[index].scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
