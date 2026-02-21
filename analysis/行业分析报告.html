@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-2023年客户行业分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --primary: #4361ee;
+            --primary-light: #e8ecff;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --text: #2b2d42;
+            --text-light: #6c757d;
+            --border: #e9ecef;
+            --shadow: 0 2px 16px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 50%, #7209b7 100%);
+            padding: 60px 40px 50px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(247,37,133,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .header-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .header h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .header p { font-size: 18px; opacity: 0.85; max-width: 600px; }
+        .header .meta { margin-top: 24px; display: flex; gap: 32px; font-size: 14px; opacity: 0.7; }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* KPI Cards */
+        .kpi-section { margin-top: -40px; position: relative; z-index: 2; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .kpi-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .kpi-card:hover { transform: translateY(-4px); }
+        .kpi-value { font-size: 36px; font-weight: 700; color: var(--primary); }
+        .kpi-label { font-size: 14px; color: var(--text-light); margin-top: 6px; }
+        .kpi-trend { font-size: 13px; margin-top: 8px; }
+        .kpi-trend.down { color: var(--accent); }
+        .kpi-trend.up { color: #06d6a0; }
+
+        /* Section */
+        .section { margin: 40px 0; }
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .section-desc { color: var(--text-light); font-size: 14px; margin-bottom: 20px; }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .card-title { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+
+        /* Grid layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+        /* Chart containers */
+        .chart { width: 100%; height: 420px; }
+        .chart-lg { width: 100%; height: 500px; }
+        .chart-sm { width: 100%; height: 360px; }
+
+        /* Table */
+        .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .data-table th {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-light);
+            border-bottom: 2px solid var(--border);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .data-table tr:hover { background: #f8f9ff; }
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .rank-1 { background: #ffd700; color: #7c5e00; }
+        .rank-2 { background: #e0e0e0; color: #555; }
+        .rank-3 { background: #f4c095; color: #8b5e34; }
+        .rank-other { background: #f0f0f0; color: #888; }
+        .pct-bar {
+            height: 6px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: width 0.5s;
+        }
+        .pct-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            margin-top: 6px;
+        }
+
+        /* Insight cards */
+        .insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+        .insight-card {
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid;
+        }
+        .insight-card.growth { background: #edfdf5; border-color: #06d6a0; }
+        .insight-card.decline { background: #fef0f5; border-color: #f72585; }
+        .insight-card.neutral { background: #f0f4ff; border-color: #4361ee; }
+        .insight-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+        .insight-card p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+
+        /* Summary */
+        .summary-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #fef0f5 100%);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin: 40px 0;
+        }
+        .summary-box h3 { font-size: 20px; margin-bottom: 16px; }
+        .summary-list { list-style: none; }
+        .summary-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #d0d0d0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .summary-list li:last-child { border-bottom: none; }
+        .summary-list li strong { color: var(--primary); }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+            .grid-2, .grid-3, .insight-grid { grid-template-columns: 1fr; }
+            .header { padding: 40px 20px 36px; }
+            .header h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-content">
+        <h1>2021-2023年客户行业分析报告</h1>
+        <p>基于6,682笔客户订单数据，深度解析16大行业的市场分布、发展趋势与结构性变化</p>
+        <div class="meta">
+            <span>数据周期: 2021年1月 - 2023年12月</span>
+            <span>样本量: 6,682 笔订单</span>
+            <span>覆盖行业: 16 大类</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- KPI Section -->
+    <div class="kpi-section">
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">6,682</div>
+                <div class="kpi-label">总订单数</div>
+                <div class="kpi-trend down">2021: 2,606 → 2023: 1,906 (下降26.9%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">16</div>
+                <div class="kpi-label">覆盖行业</div>
+                <div class="kpi-trend neutral">经清洗归并后</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">51.3%</div>
+                <div class="kpi-label">CR3 集中度</div>
+                <div class="kpi-trend down">Top3行业占比过半, 逐年下降</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">24.8%</div>
+                <div class="kpi-label">互联网行业占比</div>
+                <div class="kpi-trend down">持续下降: 26.4% → 22.1%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: 行业整体分布 -->
+    <div class="section">
+        <div class="section-title"><div class="icon">1</div> 行业整体分布</div>
+        <div class="section-desc">2021-2023年三年合计客户行业占比排名，了解市场基本盘</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">行业占比饼图</div>
+                <div id="chart-pie" class="chart"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">行业订单数排名</div>
+                <div id="chart-bar-rank" class="chart"></div>
+            </div>
+        </div>
+
+        <!-- Ranking Table -->
+        <div class="card">
+            <div class="card-title">行业占比详细排名表</div>
+            <table class="data-table" id="ranking-table">
+                <thead>
+                    <tr>
+                        <th style="width:60px">排名</th>
+                        <th>行业</th>
+                        <th style="width:100px">订单数</th>
+                        <th style="width:100px">占比</th>
+                        <th>占比分布</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Section 2: 年度趋势 -->
+    <div class="section">
+        <div class="section-title"><div class="icon">2</div> 行业年度趋势变化</div>
+        <div class="section-desc">追踪各主要行业在2021-2023年间的占比变化，发现结构性趋势</div>
+
+        <div class="card">
+            <div class="card-title">Top 8 行业占比年度趋势</div>
+            <div id="chart-trend" class="chart-lg"></div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">年度订单量变化</div>
+                <div id="chart-year-total" class="chart-sm"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">行业集中度变化 (CR3/CR5/CR10)</div>
+                <div id="chart-concentration" class="chart-sm"></div>
+            </div>
+        </div>
+
+        <!-- Insight Cards -->
+        <div class="insight-grid">
+            <div class="insight-card growth">
+                <h4>制造业强势增长</h4>
+                <p>制造业占比从2021年的2.88%上升至2023年的7.03%，增幅达144%，是增长最快的行业。反映了数字化转型向传统制造业深度渗透的趋势。</p>
+            </div>
+            <div class="insight-card decline">
+                <h4>互联网行业占比收缩</h4>
+                <p>互联网/软件/游戏虽然仍是第一大行业，但占比从26.36%降至22.09%，降幅4.3个百分点，早期红利期已过，市场趋于饱和。</p>
+            </div>
+            <div class="insight-card growth">
+                <h4>零售/电商稳步增长</h4>
+                <p>零售/电商从12.09%上升至13.43%，稳中有升，正在逐步接近教育行业，有望成为第二大行业。</p>
+            </div>
+            <div class="insight-card decline">
+                <h4>广告/传媒持续下滑</h4>
+                <p>广告/传媒/文娱从10.32%降至6.66%，三年下降3.7个百分点，行业面临结构性调整和预算收紧。</p>
+            </div>
+            <div class="insight-card decline">
+                <h4>教育行业回落</h4>
+                <p>教育/培训从15.39%降至13.33%，受行业政策调控影响明显，但仍稳居前三，市场需求依然旺盛。</p>
+            </div>
+            <div class="insight-card neutral">
+                <h4>行业多元化加深</h4>
+                <p>CR3从53.84%降至49.11%，前三大行业的集中度在下降，说明客户来源正在向更多行业扩散，市场覆盖更加均衡。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: 逐年对比 -->
+    <div class="section">
+        <div class="section-title"><div class="icon">3</div> 逐年行业占比对比</div>
+        <div class="section-desc">并排查看每年各行业的排位变动</div>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-title">2021年行业分布 (2,606单)</div>
+                <div id="chart-2021" class="chart-sm"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">2022年行业分布 (2,170单)</div>
+                <div id="chart-2022" class="chart-sm"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">2023年行业分布 (1,906单)</div>
+                <div id="chart-2023" class="chart-sm"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: 地域与规模 -->
+    <div class="section">
+        <div class="section-title"><div class="icon">4</div> 地域分布与企业规模</div>
+        <div class="section-desc">了解客户的地域集中度和企业规模画像</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">客户省份 Top 15</div>
+                <div id="chart-province" class="chart"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">企业规模分布</div>
+                <div id="chart-size" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: 客户来源 -->
+    <div class="section">
+        <div class="section-title"><div class="icon">5</div> 客户来源渠道分析</div>
+        <div class="section-desc">分析各获客渠道的贡献占比</div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">Top 10 获客渠道</div>
+                <div id="chart-source" class="chart"></div>
+            </div>
+            <div class="card">
+                <div class="card-title">业务类型分布 (按年)</div>
+                <div id="chart-biztype" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-box">
+        <h3>核心发现与建议</h3>
+        <ul class="summary-list">
+            <li><strong>市场总量下降：</strong>2021-2023年订单总量从2,606下降至1,906，年均下降幅度约14%。建议关注客户留存和复购率提升策略。</li>
+            <li><strong>互联网依赖度高但在降低：</strong>互联网/软件/游戏仍是第一大行业(24.8%)，但占比逐年下降。这既是风险（单一行业依赖度高），也是积极信号（客户来源更多元化）。</li>
+            <li><strong>制造业是最大增量机会：</strong>制造业从2.88%增长到7.03%（+144%），是三年间增长最快的行业。建议加大对制造业场景的产品适配和销售投入。</li>
+            <li><strong>教育行业需应对政策风险：</strong>教育/培训虽仍是第二大行业，但受"双减"等政策影响占比波动。建议区分公立教育与商业培训，差异化服务。</li>
+            <li><strong>零售/电商稳健增长：</strong>占比从12.09%稳步增长至13.43%，市场需求旺盛，可作为重点拓展行业之一。</li>
+            <li><strong>地域高度集中：</strong>北京、广东、上海三地客户占总量的近50%。建议加强长三角(浙江/江苏)和成渝地区的渗透率。</li>
+            <li><strong>中小企业是核心客群：</strong>16-50人企业占比最高(39%)，1-100人的中小企业合计占比超80%。产品和定价策略应以中小企业需求为核心。</li>
+            <li><strong>个人版升级是第一大获客渠道：</strong>占比约36%，说明"免费转付费"的PLG(产品驱动增长)模式是核心增长引擎，应持续优化产品体验。</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    2021-2023年客户行业分析报告 | 基于 6,682 笔订单数据生成
+</div>
+
+<script>
+// ============================================================
+// Data
+// ============================================================
+const DATA = {
+    industryRanking: [
+        { name: '互联网/软件/游戏', count: 1654, pct: 24.75 },
+        { name: '教育/培训', count: 919, pct: 13.75 },
+        { name: '零售/电商', count: 854, pct: 12.78 },
+        { name: '其他', count: 692, pct: 10.36 },
+        { name: '广告/传媒/文娱', count: 585, pct: 8.75 },
+        { name: '贸易/物流', count: 381, pct: 5.70 },
+        { name: '制造业', count: 296, pct: 4.43 },
+        { name: '未知', count: 283, pct: 4.24 },
+        { name: '服务业', count: 213, pct: 3.19 },
+        { name: '房地产/建筑', count: 204, pct: 3.05 },
+        { name: '金融', count: 167, pct: 2.50 },
+        { name: '医疗/制药', count: 115, pct: 1.72 },
+        { name: '电子/通信/硬件', count: 98, pct: 1.47 },
+        { name: '公益/社团', count: 95, pct: 1.42 },
+        { name: '政府/事业单位', count: 70, pct: 1.05 },
+        { name: '能源/化工', count: 56, pct: 0.84 },
+    ],
+    trend: {
+        '互联网/软件/游戏': [26.36, 25.16, 22.09],
+        '教育/培训':       [15.39, 12.17, 13.33],
+        '零售/电商':       [12.09, 13.04, 13.43],
+        '广告/传媒/文娱':   [10.32,  8.71,  6.66],
+        '贸易/物流':       [ 6.29,  5.35,  5.30],
+        '制造业':          [ 2.88,  4.01,  7.03],
+        '服务业':          [ 3.57,  2.76,  3.15],
+        '房地产/建筑':     [ 3.18,  2.76,  3.20],
+    },
+    years: [2021, 2022, 2023],
+    yearTotals: { 2021: 2606, 2022: 2170, 2023: 1906 },
+    yearly: {
+        2021: [
+            { name: '互联网/软件/游戏', pct: 26.36 }, { name: '教育/培训', pct: 15.39 },
+            { name: '零售/电商', pct: 12.09 }, { name: '广告/传媒/文娱', pct: 10.32 },
+            { name: '其他', pct: 7.75 }, { name: '贸易/物流', pct: 6.29 },
+            { name: '服务业', pct: 3.57 }, { name: '房地产/建筑', pct: 3.18 },
+            { name: '制造业', pct: 2.88 }, { name: '金融', pct: 2.76 },
+        ],
+        2022: [
+            { name: '互联网/软件/游戏', pct: 25.16 }, { name: '零售/电商', pct: 13.04 },
+            { name: '教育/培训', pct: 12.17 }, { name: '其他', pct: 10.65 },
+            { name: '广告/传媒/文娱', pct: 8.71 }, { name: '未知', pct: 6.68 },
+            { name: '贸易/物流', pct: 5.35 }, { name: '制造业', pct: 4.01 },
+            { name: '房地产/建筑', pct: 2.76 }, { name: '服务业', pct: 2.76 },
+        ],
+        2023: [
+            { name: '互联网/软件/游戏', pct: 22.09 }, { name: '其他', pct: 13.59 },
+            { name: '零售/电商', pct: 13.43 }, { name: '教育/培训', pct: 13.33 },
+            { name: '制造业', pct: 7.03 }, { name: '广告/传媒/文娱', pct: 6.66 },
+            { name: '贸易/物流', pct: 5.30 }, { name: '未知', pct: 4.04 },
+            { name: '房地产/建筑', pct: 3.20 }, { name: '服务业', pct: 3.15 },
+        ],
+    },
+    concentration: {
+        2021: { CR3: 53.84, CR5: 71.91, CR10: 90.59 },
+        2022: { CR3: 50.37, CR5: 69.73, CR10: 91.29 },
+        2023: { CR3: 49.11, CR5: 69.47, CR10: 91.82 },
+    },
+    province: [
+        { name: '北京市', count: 1358 }, { name: '广东省', count: 1144 },
+        { name: '上海市', count: 736 },  { name: '浙江省', count: 571 },
+        { name: '江苏省', count: 257 },  { name: '四川省', count: 180 },
+        { name: '湖北省', count: 161 },  { name: '福建省', count: 129 },
+        { name: '山东省', count: 86 },   { name: '湖南省', count: 80 },
+        { name: '河南省', count: 76 },   { name: '重庆市', count: 67 },
+        { name: '天津市', count: 64 },   { name: '河北省', count: 61 },
+        { name: '辽宁省', count: 58 },
+    ],
+    size: [
+        { name: '1-15人', count: 1009 }, { name: '16-50人', count: 1370 },
+        { name: '51-100人', count: 497 }, { name: '101-200人', count: 221 },
+        { name: '201-300人', count: 62 }, { name: '301-500人', count: 100 },
+        { name: '501-1000人', count: 80 }, { name: '1001-3000人', count: 89 },
+        { name: '3000人以上', count: 83 },
+    ],
+    source: [
+        { name: '个人版升级', count: 2379 }, { name: '400电话咨询', count: 1197 },
+        { name: '钉钉注册', count: 455 },   { name: 'SEM', count: 348 },
+        { name: '站内广告位', count: 345 },  { name: '自开拓', count: 337 },
+        { name: '预约演示', count: 301 },    { name: '官网注册_PC端', count: 283 },
+        { name: '官网注册_移动端', count: 123 }, { name: '客服线索', count: 108 },
+    ],
+    bizType: {
+        2021: { 'SaaS订单': 2505, '私有化/云SDK订单': 48, '增值服务': 5, '其他': 48 },
+        2022: { 'SaaS订单': 1935, '私有化/云SDK订单': 29, '压货核销订单': 23, '其他': 183 },
+        2023: { 'SaaS订单': 1688, '华为云SaaS订单': 51, '私有化/云SDK订单': 39, '其他': 128 },
+    }
+};
+
+// Color palette
+const COLORS = ['#4361ee','#f72585','#7209b7','#3a0ca3','#06d6a0','#ffd166','#ef476f','#118ab2','#073b4c','#84a59d','#f4845f','#577590','#f8961e','#43aa8b','#90be6d','#277da1'];
+
+// ============================================================
+// Charts
+// ============================================================
+
+// 1. Pie Chart
+const pieChart = echarts.init(document.getElementById('chart-pie'));
+pieChart.setOption({
+    tooltip: { trigger: 'item', formatter: '{b}: {c}单 ({d}%)' },
+    legend: { type: 'scroll', bottom: 0, textStyle: { fontSize: 11 } },
+    series: [{
+        type: 'pie',
+        radius: ['38%', '70%'],
+        center: ['50%', '45%'],
+        avoidLabelOverlap: true,
+        itemStyle: { borderRadius: 6, borderColor: '#fff', borderWidth: 2 },
+        label: { show: false },
+        emphasis: {
+            label: { show: true, fontSize: 14, fontWeight: 'bold' }
+        },
+        data: DATA.industryRanking.map((d, i) => ({
+            value: d.count, name: d.name,
+            itemStyle: { color: COLORS[i % COLORS.length] }
+        }))
+    }]
+});
+
+// 2. Bar Ranking
+const barChart = echarts.init(document.getElementById('chart-bar-rank'));
+const barData = [...DATA.industryRanking].filter(d => d.name !== '未知' && d.name !== '其他').reverse();
+barChart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: p => `${p[0].name}<br/>订单数: ${p[0].value}单 (${DATA.industryRanking.find(d=>d.name===p[0].name)?.pct}%)` },
+    grid: { left: 120, right: 40, top: 10, bottom: 20 },
+    xAxis: { type: 'value', show: false },
+    yAxis: { type: 'category', data: barData.map(d => d.name), axisLine: { show: false }, axisTick: { show: false }, axisLabel: { fontSize: 12 } },
+    series: [{
+        type: 'bar',
+        data: barData.map((d, i) => ({
+            value: d.count,
+            itemStyle: { color: COLORS[barData.length - 1 - i], borderRadius: [0, 6, 6, 0] }
+        })),
+        barWidth: 20,
+        label: { show: true, position: 'right', formatter: '{c}', fontSize: 12, color: '#666' }
+    }]
+});
+
+// 3. Trend Line
+const trendChart = echarts.init(document.getElementById('chart-trend'));
+const trendSeries = Object.entries(DATA.trend).map(([name, values], i) => ({
+    name, type: 'line', data: values, smooth: true,
+    symbol: 'circle', symbolSize: 8,
+    lineStyle: { width: 3 },
+    itemStyle: { color: COLORS[i] },
+    emphasis: { focus: 'series' }
+}));
+trendChart.setOption({
+    tooltip: { trigger: 'axis', formatter: params => {
+        let s = `<b>${params[0].axisValue}年</b><br/>`;
+        params.sort((a, b) => b.value - a.value).forEach(p => {
+            s += `${p.marker} ${p.seriesName}: ${p.value}%<br/>`;
+        });
+        return s;
+    }},
+    legend: { bottom: 0, textStyle: { fontSize: 11 } },
+    grid: { left: 50, right: 30, top: 30, bottom: 50 },
+    xAxis: { type: 'category', data: DATA.years.map(y => y + '年'), axisLabel: { fontSize: 13 } },
+    yAxis: { type: 'value', axisLabel: { formatter: '{value}%' }, splitLine: { lineStyle: { type: 'dashed', color: '#eee' } } },
+    series: trendSeries
+});
+
+// 4. Year Total Bar
+const yearTotalChart = echarts.init(document.getElementById('chart-year-total'));
+yearTotalChart.setOption({
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 30, top: 30, bottom: 40 },
+    xAxis: { type: 'category', data: ['2021年', '2022年', '2023年'] },
+    yAxis: { type: 'value', name: '订单数', splitLine: { lineStyle: { type: 'dashed', color: '#eee' } } },
+    series: [{
+        type: 'bar',
+        data: [
+            { value: 2606, itemStyle: { color: COLORS[0], borderRadius: [8, 8, 0, 0] } },
+            { value: 2170, itemStyle: { color: COLORS[1], borderRadius: [8, 8, 0, 0] } },
+            { value: 1906, itemStyle: { color: COLORS[2], borderRadius: [8, 8, 0, 0] } },
+        ],
+        barWidth: 60,
+        label: { show: true, position: 'top', fontSize: 14, fontWeight: 'bold', color: '#333' }
+    },{
+        type: 'line',
+        data: [2606, 2170, 1906],
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 8,
+        lineStyle: { color: '#f72585', width: 2, type: 'dashed' },
+        itemStyle: { color: '#f72585' },
+        label: { show: false }
+    }]
+});
+
+// 5. Concentration
+const concChart = echarts.init(document.getElementById('chart-concentration'));
+concChart.setOption({
+    tooltip: { trigger: 'axis', formatter: params => {
+        let s = `<b>${params[0].axisValue}</b><br/>`;
+        params.forEach(p => { s += `${p.marker} ${p.seriesName}: ${p.value}%<br/>`; });
+        return s;
+    }},
+    legend: { bottom: 0 },
+    grid: { left: 50, right: 30, top: 30, bottom: 50 },
+    xAxis: { type: 'category', data: ['2021年', '2022年', '2023年'] },
+    yAxis: { type: 'value', min: 40, max: 100, axisLabel: { formatter: '{value}%' }, splitLine: { lineStyle: { type: 'dashed', color: '#eee' } } },
+    series: [
+        { name: 'CR3', type: 'line', data: [53.84, 50.37, 49.11], smooth: true, symbol: 'circle', symbolSize: 8, lineStyle: { width: 3 }, itemStyle: { color: COLORS[0] } },
+        { name: 'CR5', type: 'line', data: [71.91, 69.73, 69.47], smooth: true, symbol: 'circle', symbolSize: 8, lineStyle: { width: 3 }, itemStyle: { color: COLORS[1] } },
+        { name: 'CR10', type: 'line', data: [90.59, 91.29, 91.82], smooth: true, symbol: 'circle', symbolSize: 8, lineStyle: { width: 3 }, itemStyle: { color: COLORS[4] } },
+    ]
+});
+
+// 6. Yearly Pie Charts
+[2021, 2022, 2023].forEach(year => {
+    const chart = echarts.init(document.getElementById('chart-' + year));
+    chart.setOption({
+        tooltip: { trigger: 'item', formatter: '{b}: {d}%' },
+        series: [{
+            type: 'pie',
+            radius: ['30%', '65%'],
+            center: ['50%', '50%'],
+            itemStyle: { borderRadius: 4, borderColor: '#fff', borderWidth: 2 },
+            label: { show: true, formatter: p => p.percent > 4 ? p.name : '', fontSize: 11 },
+            data: DATA.yearly[year].map((d, i) => ({
+                value: d.pct, name: d.name,
+                itemStyle: { color: COLORS[i] }
+            }))
+        }]
+    });
+});
+
+// 7. Province Bar
+const provChart = echarts.init(document.getElementById('chart-province'));
+const provData = [...DATA.province].reverse();
+provChart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { left: 80, right: 40, top: 10, bottom: 20 },
+    xAxis: { type: 'value', show: false },
+    yAxis: { type: 'category', data: provData.map(d => d.name), axisLine: { show: false }, axisTick: { show: false } },
+    series: [{
+        type: 'bar',
+        data: provData.map((d, i) => ({
+            value: d.count,
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                    { offset: 0, color: '#4361ee' },
+                    { offset: 1, color: '#7209b7' }
+                ]),
+                borderRadius: [0, 4, 4, 0]
+            }
+        })),
+        barWidth: 16,
+        label: { show: true, position: 'right', formatter: '{c}', fontSize: 11, color: '#666' }
+    }]
+});
+
+// 8. Size Distribution
+const sizeChart = echarts.init(document.getElementById('chart-size'));
+sizeChart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { left: 100, right: 40, top: 10, bottom: 20 },
+    xAxis: { type: 'value', show: false },
+    yAxis: { type: 'category', data: DATA.size.map(d => d.name), axisLine: { show: false }, axisTick: { show: false }, inverse: true },
+    series: [{
+        type: 'bar',
+        data: DATA.size.map((d, i) => ({
+            value: d.count,
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                    { offset: 0, color: '#06d6a0' },
+                    { offset: 1, color: '#118ab2' }
+                ]),
+                borderRadius: [0, 6, 6, 0]
+            }
+        })),
+        barWidth: 22,
+        label: { show: true, position: 'right', formatter: '{c}', fontSize: 12, color: '#666' }
+    }]
+});
+
+// 9. Source
+const sourceChart = echarts.init(document.getElementById('chart-source'));
+sourceChart.setOption({
+    tooltip: { trigger: 'item', formatter: '{b}: {c}单 ({d}%)' },
+    legend: { type: 'scroll', bottom: 0, textStyle: { fontSize: 11 } },
+    series: [{
+        type: 'pie',
+        radius: ['35%', '65%'],
+        center: ['50%', '45%'],
+        roseType: 'radius',
+        itemStyle: { borderRadius: 6, borderColor: '#fff', borderWidth: 2 },
+        label: { formatter: p => p.percent > 5 ? `${p.name}\n${p.percent}%` : '', fontSize: 11 },
+        data: DATA.source.map((d, i) => ({
+            value: d.count, name: d.name,
+            itemStyle: { color: COLORS[i] }
+        }))
+    }]
+});
+
+// 10. Biz Type Stacked Bar
+const bizTypeChart = echarts.init(document.getElementById('chart-biztype'));
+const bizTypes = ['SaaS订单', '私有化/云SDK订单', '华为云SaaS订单', '压货核销订单', '其他'];
+bizTypeChart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    legend: { bottom: 0, textStyle: { fontSize: 11 } },
+    grid: { left: 50, right: 30, top: 20, bottom: 50 },
+    xAxis: { type: 'category', data: ['2021年', '2022年', '2023年'] },
+    yAxis: { type: 'value', name: '订单数', splitLine: { lineStyle: { type: 'dashed', color: '#eee' } } },
+    series: bizTypes.map((bt, i) => ({
+        name: bt,
+        type: 'bar',
+        stack: 'total',
+        data: [
+            DATA.bizType[2021][bt] || 0,
+            DATA.bizType[2022][bt] || 0,
+            DATA.bizType[2023][bt] || 0,
+        ],
+        itemStyle: { color: COLORS[i], borderRadius: i === bizTypes.length - 1 ? [4,4,0,0] : 0 }
+    }))
+});
+
+// ============================================================
+// Ranking Table
+// ============================================================
+const tbody = document.querySelector('#ranking-table tbody');
+DATA.industryRanking.forEach((d, i) => {
+    const rank = i + 1;
+    const rankClass = rank <= 3 ? `rank-${rank}` : 'rank-other';
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td><span class="rank-badge ${rankClass}">${rank}</span></td>
+        <td style="font-weight:600">${d.name}</td>
+        <td>${d.count.toLocaleString()}</td>
+        <td>${d.pct}%</td>
+        <td>
+            <div class="pct-bar-bg"><div class="pct-bar" style="width:${d.pct / DATA.industryRanking[0].pct * 100}%"></div></div>
+        </td>
+    `;
+    tbody.appendChild(tr);
+});
+
+// ============================================================
+// Responsive
+// ============================================================
+window.addEventListener('resize', () => {
+    [pieChart, barChart, trendChart, yearTotalChart, concChart, provChart, sizeChart, sourceChart, bizTypeChart].forEach(c => c.resize());
+    [2021, 2022, 2023].forEach(y => echarts.getInstanceByDom(document.getElementById('chart-' + y))?.resize());
+});
+</script>
+</body>
+</html>
